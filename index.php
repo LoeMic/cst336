@@ -5,9 +5,13 @@
 // then click the URL that is emitted to the Output tab of the console
 
 echo 'Mike Loeser CST 336 - Internet Programming';
-echo '<br>';
-echo 'test';
 
 ?>
+
+<br><br>
+<h1>Labs</h1>
+<br>
+<a href="labs/lab1"> Lab 1 </a>
+
 </body>
 </html>
