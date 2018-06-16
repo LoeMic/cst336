@@ -5,6 +5,7 @@
 // then click the URL that is emitted to the Output tab of the console
 
 echo 'Mike Loeser CST 336 - Internet Programming';
+echo '<br>'
 echo 'test';
 
 ?>
