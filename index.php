@@ -12,6 +12,6 @@ echo 'Mike Loeser CST 336 - Internet Programming';
 <h1>Labs</h1>
 <br>
 <a href="labs/lab1"> Lab 1 </a>
-
+<a href="hw/hw1"> HW 1 </a>
 </body>
 </html>
