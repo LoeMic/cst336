@@ -1,0 +1,104 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: black;
+    color: white;
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 0px;
+}
+
+header, nav, main, footer {
+    text-align: center;
+    border: 0px solid white;
+}
+
+hr {
+    width:75%;
+}
+
+nav a {    /* links within the nav */
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 4px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: grey;
+}
+
+nav a:hover {        /* adjust the hover over */
+    border-bottom: 2px orange solid;
+    font-size: 2em;
+    transition: .7s;    /* transition effect */
+}
+
+profile_img, welcomeText {
+    float: left;
+    padding-left: 80px;
+}
+
+welcomeText {
+    width: 320px;
+    padding-left: 20px;
+    text-align: left;
+    vertical-align: top;
+    border: 0px solid white;
+}
+
+#hr_footer {
+    width:75%;   
+}
+
+footer {
+    clear: left;
+    font-size:10px;
+    color: grey;
+}
+
+#current_page {
+    border: 1px solid grey;
+}
+
+#content {
+    border: 0px solid white;
+    text-align: center;
+}
+
+table.center {
+    border: 0px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+tr.table-header {
+    font-weight: bold;
+    color: orange;
+}
+
+tr.table-row {
+    text-align: left;
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+td.left {
+    text-align: left;
+}
+
+td.right {
+    text-align: right;
+}
+
+span.list-head {
+    font-weight: bold;
+    color: orange;
+}
