@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>CST-336 - Homework 1 - Dev Process, Roles, and Responsibilities</title>
+        <style>
+            @import url("css/style.css");
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Development</h1>
+            <h3>Process, Roles, and Responsibilities</h3>
+        </header>
+        <hr />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="roles.html">Roles & Responsibilities</a>
+            <a href="process.html">Process</a>
+            <a href="details.html" id="current_page">Process Details</a>
+        </nav>
+        <br>
+        <!-- main content area -->
+        <div id="main">
+            <p>
+                This is a detailed description of the steps in the process shown on the <a href="process" alt="Process">Process</a> page.
+            </p>
+            <br>
+            <table class="center">
+                <tr class="table-header">
+                    <td>No.</td>
+                    <td>Stage</td>
+                    <td>Participants</td>
+                    <td>Coordinator</td>
+                    <td>Outcome</td>
+                    <td>Notes</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        1
+                    </td>
+                    <td class="left">
+                        Requirement Definition for Project
+                    </td>
+                    <td class="left">
+                        Product Office/Business Owner
+                    </td>
+                    <td>
+                        BO
+                    </td>
+                    <td>
+                        Epic/User Stories in Jira
+                    </td>
+                    <td>
+                        BO should create the project in as much detail as possible, in deliverable stages if a phased customer release plan is to be requested.
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        2
+                    </td>
+                    <td class="left">
+                        User Stories Review & Prioritization
+                    </td>
+                    <td class="left">
+                        BO + TPM
+                    </td>
+                    <td>
+                        BO + TPM
+                    </td>
+                    <td>
+                        Add Detail to epics/stories to necessary level for Dev Team Review.  Clarify prioritization with existing project requests.
+                    </td>
+                    <td>
+                        TPM may involve Dev Leads or SMEs as needed.
+                        <br /><br />
+                        Prep for Dev Team presentation.
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        3
+                    </td>
+                    <td class="left">
+                        Requirement Review & Tech Acceptance
+                    </td>
+                    <td class="left">
+                        PM, PO, LEAD, TSME, SMEs (optional)
+                    </td>
+                    <td>
+                        TPM + PO
+                    </td>
+                    <td>
+                        Dev Team accepts/rejects the requirements and adds to epic/stories to Backlog (TPM) for technical review and solution.
+                    </td>
+                    <td>
+                        Weekly scheduled review meeting canceled when not needed.  2-3 hours per meeting.  Delivery estimate should not be expected.
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        4
+                    </td>
+                    <td class="left">
+                        Solution Design / Release Planning
+                    </td>
+                    <td class="left">
+                        TPM, LEAD, PM, SMEs (optional)
+                    </td>
+                    <td>
+                        LEAD + TPM + PM
+                    </td>
+                    <td>
+                        Create High Level Design, WBS, Sizing, High Level Delivery Plan
+                    </td>
+                    <td>
+                        Solution process may require design sprints to do research or POC projects.
+                        <br /><br />
+                        LEAD may bring in SMEs as needed.
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        5
+                    </td>
+                    <td class="left">
+                        Solution / Release Plan Review
+                    </td>
+                    <td class="left">
+                        PO, PM, TPM, LEAD, SMEs (optional)
+                    </td>
+                    <td>
+                        PM + ARCH + TPM
+                    </td>
+                    <td>
+                        LEAD presents solution, PM presents delivery plan and resource needs.
+                        <br /><br />
+                        Timeline, resources, and scope/estimates approved.  Tentative Sprint Plan.
+                    </td>
+                    <td>
+                        Scheduled by PM & LEAD as needed based on solution completion.  1-2 hour meet and review.  Detailed sprint plans will come later before each sprint.
+                        <br /><br />
+                        Resource gaps may require solution, scope, or timeline adjustments.
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        6
+                    </td>
+                    <td class="left">
+                        Sprint Plan
+                    </td>
+                    <td class="left">
+                        LEAD, TSME, PM, SM, PO (optional)
+                    </td>
+                    <td>
+                        PM
+                    </td>
+                    <td>
+                        High-level solution stories are broken down into tasks and assigned to developers.
+                    </td>
+                    <td>
+                        2 hours. Dev agree on delivering assigned Stories in Sprint.
+                        <br /><br />
+                        Solution detail or implementation call-outs may be needed in task stories.
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        7
+                    </td>
+                    <td class="left">
+                        Sprint Assignment Review
+                    </td>
+                    <td class="left">
+                        Dev Team
+                    </td>
+                    <td>
+                        PM
+                    </td>
+                    <td>
+                        LEAD and PM review task assignments with the team and answer any questions.
+                        <br /><br />
+                        Team aware of assignments and starts implementation.
+                    </td>
+                    <td>
+                        As-needed.  This is an opportunity for the team to gather and understand their assigned tasks, how the tasks fit into the overall solution, and ask questions.
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        8
+                    </td>
+                    <td class="left">
+                        Daily Stand Up
+                    </td>
+                    <td class="left">
+                        Dev Team
+                    </td>
+                    <td>
+                        SM
+                    </td>
+                    <td>
+                        Status update with 3 magical questions, nothing more.
+                    </td>
+                    <td>
+                        Short discussion (~20 mins) with implementation team.  Separate stand-up meetings may be needed per time zone with a coordinator to take notes and share comments with scrum master.  Higher level solution or implementation reviews can be had separately.
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        9
+                    </td>
+                    <td class="left">
+                        Sprint Review
+                    </td>
+                    <td class="left">
+                        PO + Dev Team
+                    </td>
+                    <td>
+                        PM + SM
+                    </td>
+                    <td>
+                        SM and Dev Team present work to Biz. Biz accepts or rejects the stories.
+                    </td>
+                    <td>
+                        2-3 hours. It is Not a sprint plan meeting.  Rejected items will have bugs created or be moved to next sprint.
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        10
+                    </td>
+                    <td class="left">
+                        Sprint Retrospective
+                    </td>
+                    <td class="left">
+                        SM + Dev Team
+                    </td>
+                    <td>
+                        SM
+                    </td>
+                    <td>
+                        Notes about what went well, challenges, how can we improve more.
+                    </td>
+                    <td>
+                        1 hour.  Whole dev team discussion about sprint results, process and necessary changes, challenges and possible resolutions to make next sprint better.  SM should store comments and make adjustments as necessary for next sprint.
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td class="left">
+                        11
+                    </td>
+                    <td class="left">
+                        Loop to Sprint Plan Stage, Step 6
+                    </td>
+                    <td class="left">
+                        &nbsp;
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        If no next sprint, move on to final delivery tasks and review of next project.
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- The footer goes inside the body but not always -->
+        <footer>
+            <br /><br />
+            <hr id="hr_footer" />
+            <p id="footer">
+                &copy; Mike Loeser - 2018<br>
+                The information provided here is for academic purposes only
+                <br /><br />
+                <a href="http://www.csumb.edu" alt="CSU Monterey Bay"><img src="img/csumb_icon.png" alt="CSU Monterey Bay"></a>
+            </p>
+        </footer>
+        <!-- closing footer -->
+    </body>
+    <!-- closing body -->
+
+</html>

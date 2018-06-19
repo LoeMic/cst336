@@ -58,3 +58,55 @@ footer {
 #current_page {
     color: lightgrey;
 }
+
+div.main_list {
+    border: 1px solid grey;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+li:hover {
+    background-color: orange;
+}
+
+table.center {
+    border: 0px solid grey;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+tr.table-header {
+    font-weight: bold;
+    color: orange;
+}
+
+tr.table-row {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: grey;
+}
+
+td {
+    border: 1px solid grey;
+    padding-left: 10px;
+    padding-right: 10px;
+    vertical-align: top;
+}
+
+td.center {
+    text-align: center;
+}
+td.left {
+    text-align: left;
+}
+
+td.right {
+    text-align: right;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: grey;
+}
