@@ -1,0 +1,12 @@
+[23-Jun-2018 06:37:24 UTC] PHP Parse error:  syntax error, unexpected ':' in /home/ubuntu/workspace/cst336/labs/lab2/index.php on line 25
+[23-Jun-2018 06:46:04 UTC] PHP Parse error:  syntax error, unexpected 'img' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/cst336/labs/lab2/index.php on line 35
+[23-Jun-2018 07:12:44 UTC] PHP Parse error:  syntax error, unexpected 'function' (T_FUNCTION), expecting ',' or ';' in /home/ubuntu/workspace/cst336/labs/lab2/index.php on line 23
+[23-Jun-2018 07:24:47 UTC] PHP Fatal error:  Call to undefined function displaySymbol() in /home/ubuntu/workspace/cst336/labs/lab2/index.php on line 15
+[23-Jun-2018 07:24:47 UTC] PHP Stack trace:
+[23-Jun-2018 07:24:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab2/index.php:0
+[23-Jun-2018 07:49:38 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/cst336/labs/lab2/inc/functions.php on line 76
+[23-Jun-2018 07:49:38 UTC] PHP Stack trace:
+[23-Jun-2018 07:49:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab2/index.php:0
+[23-Jun-2018 07:50:51 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/cst336/labs/lab2/inc/functions.php on line 73
+[23-Jun-2018 07:50:51 UTC] PHP Stack trace:
+[23-Jun-2018 07:50:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab2/index.php:0
