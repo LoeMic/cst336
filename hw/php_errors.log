@@ -1,0 +1,9 @@
+[23-Jun-2018 22:12:21 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 91
+[23-Jun-2018 22:12:32 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 102
+[23-Jun-2018 22:44:15 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 122
+[23-Jun-2018 22:44:55 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 122
+[23-Jun-2018 22:44:59 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 122
+[23-Jun-2018 23:08:05 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 125
+[23-Jun-2018 23:13:00 UTC] PHP Parse error:  syntax error, unexpected '$pedalImgLg' (T_VARIABLE) in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 15
+[23-Jun-2018 23:13:17 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 93
+[23-Jun-2018 23:41:35 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 133
