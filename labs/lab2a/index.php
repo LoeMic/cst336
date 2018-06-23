@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Lab 2 </title>
+        <title> Lab 2a </title>
         <style>
             table {
                 padding: 0px;
@@ -33,7 +33,7 @@
         The program will identify whether each number is odd or even.
         The program will also calculate the sum and average of the random numbers.
         -->
-        <p>Lab2 - PHP Random Numbers</p>
+        <p>Lab2a - PHP Random Numbers</p>
         <table>
             <tr>
                 <td class="head">iteration</td>
