@@ -18,6 +18,10 @@
             p {
                 text-align: center;
             }
+            
+            td.head {
+                font-weight: bold;
+            }
         </style>
     </head>
     <body>
@@ -31,6 +35,12 @@
         -->
         <p>Lab2 - PHP Random Numbers</p>
         <table>
+            <tr>
+                <td class="head">iteration</td>
+                <td class="head">random number</td>
+                <td class="head">even / odd</td>
+                <td class="head">calcs</td>
+            </tr>
         <?php
         
         $rndNum = 0;
@@ -44,10 +54,10 @@
             echo "<tr>";
             // show the number
             echo "<td>";
-            echo "iteration = " . $n;
+            echo $n;
             echo "</td>";
             echo "<td>";
-            echo "random number = " . $rndNum;
+            echo $rndNum;
             echo "</td>";
             echo "<td>";
             echo ($rndNum % 2 == 0)?"even":"odd";
