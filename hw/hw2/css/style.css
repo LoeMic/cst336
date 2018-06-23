@@ -1,6 +1,8 @@
 body {
     text-align: center;
     font-family: 'Noto Serif', serif;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -14,7 +16,8 @@ h2 {
 }
 
 img {
-    border: 1px solid black;
+    border: 2px solid grey;
+    vertical-align: top;
 }
 
 table.summ {
@@ -35,6 +38,7 @@ td {
 
 td.dets {
     text-align: left;
+    vertical-align: top;
 }
 
 table.details {
