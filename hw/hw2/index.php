@@ -32,7 +32,7 @@ The original Russian Big Muff was better built and not as flimsy as standard EHX
 of the time, but it had it's issues.  I've personally had 2 of these and one had a switch 
 fail and other has had issues with 2 of it's pots.  Thankfully they are easily fixed.
 <br /><br />
-The Way Huge pedal is built like an absolut tank.  The housing is aluminum and thicker 
+The Way Huge pedal is built like an absolute tank.  The housing is aluminum and thicker 
 than the normal sheet steel used for pedals, knobs are their standard large pointed items 
 with painted markers, and the switch feels like it is ready to take years of abuse.  All 
 of this is typical of the Way Huge line.
