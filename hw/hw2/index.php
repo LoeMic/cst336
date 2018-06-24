@@ -124,6 +124,9 @@ This is an absolute new classic and easily worth the \$150 purchase price.
         <br />    
         <div id="">
             <!-- detail reviews -->
+            <table class='details'>
+                <tr>
+            
             <?php
                 $idx = $_GET["idx"];
                 
@@ -133,8 +136,6 @@ This is an absolute new classic and easily worth the \$150 purchase price.
                     $idx = array_rand($pedals);
                 }
 
-                echo "<table class='details'>";
-                echo "<tr>";
                 echo "<td class='dets'>";
                 
                 // only display image if one provided
@@ -150,10 +151,21 @@ This is an absolute new classic and easily worth the \$150 purchase price.
                 echo "<td class='dets'>";
                 echo $pedalDetails[$idx];
                 echo "</td>";
-                echo "</tr>";
-                echo "</table>";
             ?>
+            
+                </tr>
+            </table>
         </div>
+        
+        <!--
+        <?php
+            // need a second loop - add some comments to the page
+            for ($i = 0; $i < 10; $i++)
+            {
+                echo "building comment - " . $i;
+            }
+        ?>
+        -->
         
         <!-- The footer goes inside the body but not always -->
         <footer>
@@ -161,6 +173,7 @@ This is an absolute new classic and easily worth the \$150 purchase price.
             <hr id="hr_footer" />
             
             page views: <?php echo rand(100,1000); ?>
+            
             <br />
             <p id="footer">
                 &copy; Mike Loeser - 2018<br>

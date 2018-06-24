@@ -7,3 +7,4 @@
 [23-Jun-2018 23:13:00 UTC] PHP Parse error:  syntax error, unexpected '$pedalImgLg' (T_VARIABLE) in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 15
 [23-Jun-2018 23:13:17 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 93
 [23-Jun-2018 23:41:35 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 133
+[23-Jun-2018 23:59:16 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 163
