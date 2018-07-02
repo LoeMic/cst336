@@ -15,3 +15,12 @@
 [02-Jul-2018 17:14:38 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 47
 [02-Jul-2018 17:16:14 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 47
 [02-Jul-2018 17:24:19 UTC] PHP Parse error:  syntax error, unexpected '/' in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 72
+[02-Jul-2018 18:14:07 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 69
+[02-Jul-2018 18:14:07 UTC] PHP Stack trace:
+[02-Jul-2018 18:14:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab3/index.php:0
+[02-Jul-2018 18:16:21 UTC] PHP Fatal error:  Call to undefined function lenth() in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 13
+[02-Jul-2018 18:16:21 UTC] PHP Stack trace:
+[02-Jul-2018 18:16:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab3/index.php:0
+[02-Jul-2018 18:16:32 UTC] PHP Fatal error:  Call to undefined function lenth() in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 13
+[02-Jul-2018 18:16:32 UTC] PHP Stack trace:
+[02-Jul-2018 18:16:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab3/index.php:0

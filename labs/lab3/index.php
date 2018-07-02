@@ -10,7 +10,7 @@
         
         $keyword = $_GET['keyword'];
         
-        if (isset($_GET['category']))
+        if (isset($_GET['category']) AND strlen($_GET['category']) > 0)
         {
             $keyword = $_GET['category'];
         }
