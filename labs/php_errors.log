@@ -10,3 +10,8 @@
 [23-Jun-2018 07:50:51 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/cst336/labs/lab2/inc/functions.php on line 73
 [23-Jun-2018 07:50:51 UTC] PHP Stack trace:
 [23-Jun-2018 07:50:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab2/index.php:0
+[02-Jul-2018 17:02:59 UTC] PHP Parse error:  syntax error, unexpected 'unset' (T_UNSET), expecting ',' or ';' in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 62
+[02-Jul-2018 17:03:17 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 81
+[02-Jul-2018 17:14:38 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 47
+[02-Jul-2018 17:16:14 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 47
+[02-Jul-2018 17:24:19 UTC] PHP Parse error:  syntax error, unexpected '/' in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 72
