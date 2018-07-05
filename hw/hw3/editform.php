@@ -1,141 +1,229 @@
 <?php
+    // link the functions
+    include 'functions.php';
+    session_start();
+    
+    $id = NULL;
 
-// link the functions
-include 'functions.php';
-session_start();
-
-$title = '';
-
-if (isset($_GET['addItem']))
-{
-    $title = 'Add New Review';
-}
-elseif (isset($_GET['editItem']))
-{
-    $title = 'Edit Review';    
-}
-
-/*
-// check for add item submission
-if (isset($_POST['AddItem']))
-{
-    // test the form elements
-    $name = $_POST['name'];
-    $category = $_POST['category'];
-    $rating = $_POST['rating'];
-    $price = $_POST['price'];
-    $imageSm = $_POST['imageSm'];
-    $imageLg = $_POST['imageLg'];
-    $reviewText = $_POST['reviewText'];
-
-    // get the entered values from the form
-    //addReview($_POST['name'],$_POST['category'], $_POST['price'], $_POST['imageSm'], $_POST['imageLg'], $_POST['reviewText']);
-}
-*/
+    // check for an id passed in - if yes, edit.  if no, add
+    if (isset($_REQUEST['id']) AND $_SERVER['REQUEST_METHOD'] != 'POST')
+    {
+        $id = $_REQUEST['id'];
+        
+        // find the contact record
+        foreach ($_SESSION['contactList'] as $contact)
+        {
+            // look for matching id and pull values
+            if ($contact['id'] == $id)
+            {
+                // set the form variables
+                $fname = $contact['fname'];
+                $lname = $contact['lname'];
+                $phone = $contact['phone'];
+                $email = $contact['email'];
+                $pref = $contact['pref'];
+                $country = $contact['country'];
+                
+                break;
+            }
+        }
+    }
+    
+    // error display variables
+    $fnameErr = "";
+    $lnameErr = "";
+    $phoneErr = "";
+    $emailErr = "";
+    $prefErr = "";
+    $countryErr = "";
+    
+    // save display variable
+    $saveResponse = "";
+    
+    // form submitted - validate and save
+    if ($_SERVER['REQUEST_METHOD'] == 'POST')
+    {
+        /*
+        // testing
+        echo 'last was post';
+        */
+        
+        $valid = true;
+        
+        $id = $_POST['id'];
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $phone = $_POST['phone'];
+        $email = $_POST['email'];
+        $pref = $_POST['pref'];
+        $country = $_POST['country'];
+        
+        if (!isset($fname) OR empty($fname))
+        {
+            $fnameErr = '<br />First Name is required';
+            $valid = false;
+        }
+        
+        if (!isset($lname) OR empty($lname))
+        {
+            $lnameErr = '<br />Last Name is required';
+            $valid = false;
+        }
+        
+        if (isset($phone) AND !empty($phone) AND !preg_match('/^\d+$/', $phone))
+        {
+            $phoneErr = '<br />Submit numbers only';
+            $valid = false;
+        }
+        
+        if (!isset($email) OR empty($email))
+        {
+            $emailErr = '<br />Email is required';
+            $valid = false;
+        }
+        if (!isset($pref))
+        {
+            $prefErr = '<br />Contact Preference is required';
+            $valid = false;
+        }
+        if (isset($pref) AND $pref == '0' AND empty($phone))
+        {
+            $prefErr = '<br />Cannot select phone if no phone entered';
+            $valid = false;
+        }
+        
+        if ($valid)
+        {
+            saveContact($id, $fname, $lname, $phone, $email, $pref, $country);
+            $saveResponse = "<br/>Saved successfully<br/>";
+            
+            // if this was a prior add, the id would not be set
+            if (!isset($id) OR $id == NULL)
+            {
+                $id = $_SESSION['maxId'];
+            }
+        }
+        else
+        {
+            $saveResponse = "<br/>Fix errors and retry<br/>";
+        }
+    }
 
 ?>
-
-<!DOCTYPE html>
 <html>
     <head>
-        <title> The World of Fuzz - Reviews by Mike Loeser</title>
+        <title> HW3 - Contact Management </title>
         <meta charset="utf-8" />
         <style>
             @import "css/style.css";
         </style>
         <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
-        <script src="scripts/lightbox.js" type="text/javascript"></script>
+        <script src="scripts/scripts.js"></script>
     </head>
     <body>
         <header>
-        <h1> The World of Fuzz </h1>
-        <h3> Pedal Reviews by Mike Loeser </h3>
+        <h1> HW3 - Contact Management </h1>
         </header>
-
-        <br />
-
-        <span id='formTitle'><?=$title?></span>
-        <form method='post' id='pedalForm' action="#">
-            <input type='hidden' id='testAction' name='testAction' value='add'>
-            <table class='additem'>
-                <tr>
-                    <td>
-                        <label for='pname'>Pedal Name</label>
-                        <input type='text' id='name' name='name' required value='<?php echo $name;?>'>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for='category'>Category</label>
-                        <select id='category' id='category' name='category' required value="<?php echo $category;?>">
-                            <option value='Fuzz'>Fuzz</option>
-                            <option value='Overdrive'>Overdrive</option>
-                            <option value='Distortion'>Distortion</option>
-                            <option value='Boost'>Boost</option>
-                            <option value='Delay'>Delay</option>
-                            <option value='Reverb'>Reverb</option>
-                            <option value='EQ'>EQ</option>
-                            <option value='Phaser'>Phaser</option>
-                            <option value='Flanger'>Flanger</option>
-                            <option value='Wah'>Wah</option>
-                            <option value='Looper'>Looper</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for='rating'>Rating</label>
-                        <input type='radio' id='rating' name='rating' value='0' required
-                            <?php if (isset($rating) && $rating==0) echo "checked";?> >0 Stars</input>
-                        <br />
-                        <input type='radio' id='rating' name='rating' value='1'
-                            <?php if (isset($rating) && $rating==1) echo "checked";?> >1 Star</input>
-                        <br />
-                        <input type='radio' id='rating' name='rating' value='2'
-                            <?php if (isset($rating) && $rating==2) echo "checked";?> >2 Stars</input>
-                        <br />
-                        <input type='radio' id='rating' name='rating' value='3'
-                            <?php if (isset($rating) && $rating==3) echo "checked";?> >3 Stars</input>
-                        <br />
-                        <input type='radio' id='rating' name='rating' value='4'
-                            <?php if (isset($rating) && $rating==4) echo "checked";?> >4 Stars</input>
-                        <br />
-                        <input type='radio' id='rating' name='rating' value='5'
-                            <?php if (isset($rating) && $rating==5) echo "checked";?> >5 Stars</input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for='price'>Price</label>
-                        <input type='text' id='price' name='price' required value="<?php echo $price;?>"></input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for='imageSm'>Small Image URL</label>
-                        <input type='text' id='imageSm' name='imageSm' value="<?php echo $imageSm;?>"></input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for='imageLg'>Large Image URL</label>
-                        <input type='text' id='imageLg' name='imageLg' value="<?php echo $imageLg;?>"></input>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for='reviewText'>Review Text</label>
-                        <textarea id='reviewText' name='reviewText' required><?php echo $reviewText;?></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button type='submit' value='submit'>Add Item</button>&nbsp;
-                        <button type='reset' value='Cancel' onclick='hideForm();'>Cancel</button>
-                    </td>
-                </tr>
-            </table>
+        <nav>
+            <h3><a href="index.php">Contact List</a>
+            &nbsp;&nbsp;
+            Form</h3>
+        </nav>
+        <h3> <?= !isset($id) ? 'Add' : 'Update';?> Contact </h3>
+        
+    <?php
+        /*
+        // test - display the form variables
+        echo 'id = ' . $id;
+        echo '<br>empty(id) = ' . empty($id);
+        echo '<br>maxid = ' . $_SESSION['maxId'];
+        echo '<br>fname = ' . $fname;
+        echo '<br>lname = ' . $lname;
+        echo '<br>phone = ' . $phone;
+        echo '<br>email = ' . $email;
+        echo '<br>pref = ' . $pref;
+        echo '<br>country = ' . $country;
+        echo '<br>';
+        */
+    ?>
+    
+        <form name='contactForm' method='POST'>
+        <table>
+            <input type='hidden' name='id' id='id' value='<?= $id ?>'></input>
+            <tr>
+                <td class='contact'>
+                    <label for='fname'>First Name: </label><span class='req'>*</span>
+                </td>
+                <td class='contact'>
+                    <input type='text' name='fname' id='fname' value='<?=$fname?>'></input>
+                    <span class='err'><?=$fnameErr?></span>
+                </td>
+            </tr>
+            <tr>
+                <td class='contact'>
+                    <label for='lname'>Last Name: </label><span class='req'>*</span>
+                </td>
+                <td class='contact'>
+                    <input type='text' name='lname' id='lname' value='<?=$lname?>'></input>
+                    <span class='err'><?=$lnameErr?></span>
+                </td>
+            </tr>
+            <tr>
+                <td class='contact'>
+                    <label for='phone'>Phone Number: </label>
+                </td>
+                <td class='contact'>
+                    <input type='text' name='phone' id='phone' value='<?=$phone?>'></input>
+                    <span class='err'><?=$phoneErr?></span>
+                </td>
+            </tr>
+            <tr>
+                <td class='contact'>
+                    <label for='email'>Email Address: </label><span class='req'>*</span>
+                </td>
+                <td class='contact'>
+                    <input type='text' name='email' id='email' value='<?=$email?>'></input>
+                    <span class='err'><?=$emailErr?></span>
+                </td>
+            </tr>
+            <tr>
+                <td class='contact'>
+                    <label for='pref'>Contact Preference: </label><span class='req'>*</span>
+                </td>
+                <td class='contact'>
+                    <input type='radio' name='pref' id='pref' value='0' <?= $pref=='0' ? 'checked' : ''?>>phone</input><br/>
+                    <input type='radio' name='pref' id='pref' value='1' <?= $pref=='1' ? 'checked' : ''?>>email</input><br/>
+                    <input type='radio' name='pref' id='pref' value='2' <?= $pref=='2' ? 'checked' : ''?>>none</input>
+                    <span class='err'><?=$prefErr?></span>
+                </td>
+            </tr>
+            <tr>
+                <td class='contact'>
+                    <label for='country'>Country: </label>
+                </td>
+                <td class='contact'>
+                    <select name='country' id='country'>
+                        <option value=''>Select an option -- </option>
+                        <option value='us' <?= $country=='us' ? 'selected' : ''?>>United States</option>
+                        <option value='uk' <?= $country=='uk' ? 'selected' : ''?>>United Kingdom</option>
+                        <option value='ca' <?= $country=='ca' ? 'selected' : ''?>>Canada</option>
+                        <option value='mx' <?= $country=='mx' ? 'selected' : ''?>>Mexico</option>
+                        <option value='es' <?= $country=='es' ? 'selected' : ''?>>Spain</option>
+                        <option value='fr' <?= $country=='fr' ? 'selected' : ''?>>France</option>
+                        <option value='it' <?= $country=='it' ? 'selected' : ''?>>Italy</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        
+        <br/>
+        <button type='submit' name='save' value='<?=isset($id) ? 'Update' : 'Add'?>'><?=isset($id) ? 'Update' : 'Add'?></button> &nbsp;&nbsp; 
+        <button value="Cancel" onclick='window.location.replace("index.php");'>Cancel</button>
+        
         </form>
+        
+        <span class="err"><?=$saveResponse?></span>
+
         <!-- The footer goes inside the body but not always -->
         <footer>
             <br /><br />

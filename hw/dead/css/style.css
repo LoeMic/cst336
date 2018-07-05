@@ -1,0 +1,127 @@
+body {
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 0px;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    border: 0px solid grey;
+    vertical-align: top;
+}
+
+table.summ {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+td.summ_name {
+    text-align: right;
+}
+td.summ_img {
+    text-align: left;
+}
+
+td {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+table.dets {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    border:0px solid black;
+}
+
+td.name {
+    text-align: center;
+    vertical-align: top;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+td.image {
+    text-align: center;
+    vertical-align: top;
+}
+
+td.cat, td.rating, td.price {
+    text-align: center;
+    vertical-align: top;
+    font-size:14px;
+    font-weight: bold;
+}
+
+td.dets {
+    text-align: left;
+    vertical-align: top;
+    font-weight: normal;
+    padding-top: 10px;
+}
+
+a {
+    color: grey;
+}
+a.visited {
+    color: grey;
+}
+
+hr {
+    width:75%;
+}
+
+#hr_footer {
+    width:75%;   
+}
+
+footer {
+    clear: left;
+    font-size:8px;
+    color: grey;
+}
+
+p.instructions {
+    clear: left;
+    font-size:8px;
+    color: grey;
+}
+
+div.inputform {
+    text-align: center;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+#editForm
+{
+	display: none;
+	position: fixed;
+	top: 20%;
+	left: 20%;
+	width: 400px;
+	height: 500px;
+	padding: 20px;
+	margin:0 auto;
+	border: 1px solid black;
+	background-color: white;
+	z-index:101;
+	overflow: auto;
+}
+
+.frmError {
+    color: #ff0000;
+}
