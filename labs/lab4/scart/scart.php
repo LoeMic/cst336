@@ -14,7 +14,7 @@
         }
     }
     
-    // 'itemId' in a form post is used to do a quantity update
+    // 'itemId' in a form post is used to do a quantity update - should see 2 posted values
     if (isset($_POST['itemId']))
     {
         foreach ($_SESSION['cart'] as &$item)

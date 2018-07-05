@@ -1,10 +1,41 @@
-[23-Jun-2018 22:12:21 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 91
-[23-Jun-2018 22:12:32 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 102
-[23-Jun-2018 22:44:15 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 122
-[23-Jun-2018 22:44:55 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 122
-[23-Jun-2018 22:44:59 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 122
-[23-Jun-2018 23:08:05 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 125
-[23-Jun-2018 23:13:00 UTC] PHP Parse error:  syntax error, unexpected '$pedalImgLg' (T_VARIABLE) in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 15
-[23-Jun-2018 23:13:17 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 93
-[23-Jun-2018 23:41:35 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 133
-[23-Jun-2018 23:59:16 UTC] PHP Parse error:  syntax error, unexpected '++' (T_INC), expecting ')' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 163
+[04-Jul-2018 01:01:24 UTC] PHP Warning:  array_push() expects parameter 1 to be array, null given in /home/ubuntu/workspace/cst336/hw/hw3a/functions.php on line 46
+[04-Jul-2018 01:01:24 UTC] PHP Stack trace:
+[04-Jul-2018 01:01:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/index.php:0
+[04-Jul-2018 01:01:24 UTC] PHP   2. addContact() /home/ubuntu/workspace/cst336/hw/hw3a/index.php:29
+[04-Jul-2018 01:01:24 UTC] PHP   3. array_push() /home/ubuntu/workspace/cst336/hw/hw3a/functions.php:46
+[04-Jul-2018 04:35:46 UTC] PHP Parse error:  syntax error, unexpected '$fname' (T_VARIABLE) in /home/ubuntu/workspace/cst336/hw/hw3a/index.php on line 28
+[04-Jul-2018 04:36:42 UTC] PHP Parse error:  syntax error, unexpected '$fname' (T_VARIABLE) in /home/ubuntu/workspace/cst336/hw/hw3a/index.php on line 28
+[04-Jul-2018 04:40:07 UTC] PHP Parse error:  syntax error, unexpected '$fname' (T_VARIABLE) in /home/ubuntu/workspace/cst336/hw/hw3a/index.php on line 28
+[04-Jul-2018 05:04:26 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/cst336/hw/hw3a/functions.php on line 113
+[04-Jul-2018 05:04:26 UTC] PHP Stack trace:
+[04-Jul-2018 05:04:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/index.php:0
+[04-Jul-2018 05:12:38 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/cst336/hw/hw3a/functions.php on line 78
+[04-Jul-2018 05:12:38 UTC] PHP Stack trace:
+[04-Jul-2018 05:12:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/index.php:0
+[04-Jul-2018 22:06:32 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/ubuntu/workspace/cst336/hw/hw3a/editform.php on line 116
+[04-Jul-2018 23:13:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/cst336/hw/hw3a/editform.php on line 14
+[04-Jul-2018 23:13:26 UTC] PHP Stack trace:
+[04-Jul-2018 23:13:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/editform.php:0
+[04-Jul-2018 23:18:23 UTC] PHP Parse error:  syntax error, unexpected '$phoneErr' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/cst336/hw/hw3a/editform.php on line 69
+[04-Jul-2018 23:23:34 UTC] PHP Fatal error:  Call to undefined function isempty() in /home/ubuntu/workspace/cst336/hw/hw3a/editform.php on line 68
+[04-Jul-2018 23:23:34 UTC] PHP Stack trace:
+[04-Jul-2018 23:23:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/editform.php:0
+[04-Jul-2018 23:53:05 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/cst336/hw/hw3a/index.php on line 20
+[04-Jul-2018 23:58:23 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/cst336/hw/hw3a/functions.php on line 124
+[04-Jul-2018 23:58:23 UTC] PHP Stack trace:
+[04-Jul-2018 23:58:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/index.php:0
+[04-Jul-2018 23:59:43 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/cst336/hw/hw3a/functions.php on line 123
+[04-Jul-2018 23:59:43 UTC] PHP Stack trace:
+[04-Jul-2018 23:59:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/index.php:0
+[05-Jul-2018 00:00:49 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/cst336/hw/hw3a/functions.php on line 123
+[05-Jul-2018 00:00:49 UTC] PHP Stack trace:
+[05-Jul-2018 00:00:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/index.php:0
+[05-Jul-2018 00:01:53 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/cst336/hw/hw3a/functions.php on line 121
+[05-Jul-2018 00:01:53 UTC] PHP Stack trace:
+[05-Jul-2018 00:01:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/index.php:0
+[05-Jul-2018 00:03:00 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/cst336/hw/hw3a/functions.php on line 121
+[05-Jul-2018 00:03:00 UTC] PHP Stack trace:
+[05-Jul-2018 00:03:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/index.php:0
+[05-Jul-2018 00:03:39 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/cst336/hw/hw3a/functions.php on line 122
+[05-Jul-2018 00:03:39 UTC] PHP Stack trace:
+[05-Jul-2018 00:03:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw3a/index.php:0
