@@ -24,3 +24,9 @@
 [02-Jul-2018 18:16:32 UTC] PHP Fatal error:  Call to undefined function lenth() in /home/ubuntu/workspace/cst336/labs/lab3/index.php on line 13
 [02-Jul-2018 18:16:32 UTC] PHP Stack trace:
 [02-Jul-2018 18:16:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab3/index.php:0
+[08-Jul-2018 06:43:50 UTC] PHP Fatal error:  Undefined class constant 'fetchAll' in /home/ubuntu/workspace/cst336/labs/lab5/purchaseHistory.php on line 19
+[08-Jul-2018 06:43:50 UTC] PHP Stack trace:
+[08-Jul-2018 06:43:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/purchaseHistory.php:0
+[08-Jul-2018 06:49:50 UTC] PHP Fatal error:  Undefined class constant 'fetchAll' in /home/ubuntu/workspace/cst336/labs/lab5/purchaseHistory.php on line 19
+[08-Jul-2018 06:49:50 UTC] PHP Stack trace:
+[08-Jul-2018 06:49:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/purchaseHistory.php:0
