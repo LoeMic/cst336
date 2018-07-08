@@ -85,30 +85,64 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title> OtterMart Product Search </title>
         <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     </head>
     <body>
         <div>
             <h1> OtterMart Product Search </h1>
             
+            <br />
             <form>
-                Product: <input type="text" name="product" />
+                <table>
+                    <tr>
+                        <td class="key">
+                            Product:
+                        </td>
+                        <td class="value">
+                            <input type="text" name="product" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            Category:
+                        </td>
+                        <td class="value">
+                            <select name="category">
+                                <option value="">Select One</option>
+                                <?=displayCategories()?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            Price - From:
+                        </td>
+                        <td class="value">
+                             <input type="text" name="priceFrom" size="7"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            To:
+                        </td>
+                        <td class="value">
+                            <input type="text" name="priceTo" size="7" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            Order Result By:
+                        </td>
+                        <td class="value">
+                            <input type="radio" name="orderBy" value="price" /> Price <br />
+                            <input type="radio" name="orderBy" value="name" /> Name
+                        </td>
+                    </tr>
+                </table>
+
                 <br />
-                Category: 
-                    <select name="category">
-                        <option value="">Select One</option>
-                        <?=displayCategories()?>
-                    </select>
-                <br />
-                Price: From <input type="text" name="priceFrom" size="7"/>
-                        To <input type="text" name="priceTo" size="7" />
-                <br />
-                Order Result By:
-                <br />
-                <input type="radio" name="orderBy" value="price" /> Price <br />
-                <input type="radio" name="orderBy" value="name" /> Name
-                <br /><br />
                 <input type="submit" value="Search" name="searchForm" />
             </form>
             
@@ -116,7 +150,9 @@
         </div>
         
         </hr>
-        <?=displaySearchResults()?>
         
+        <div class="searchResults">
+            <?=displaySearchResults()?>
+        </div>
     </body>
 </html>
