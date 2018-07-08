@@ -23,7 +23,7 @@
     echo "productId = " . $productId . "<br />";
     print_r($records);
     echo "<br />";
-    */
+    */  
     
     echo $records[0]['productName'] . "<br />";
     echo "<img src='" . $records[0]['productImage'] . "' width='200'/><br />";
