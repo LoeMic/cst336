@@ -204,13 +204,13 @@
                 <td class='contact'>
                     <select name='country' id='country'>
                         <option value=''>Select an option -- </option>
-                        <option value='us' <?= $country=='us' ? 'selected' : ''?>>United States</option>
-                        <option value='uk' <?= $country=='uk' ? 'selected' : ''?>>United Kingdom</option>
-                        <option value='ca' <?= $country=='ca' ? 'selected' : ''?>>Canada</option>
-                        <option value='mx' <?= $country=='mx' ? 'selected' : ''?>>Mexico</option>
-                        <option value='es' <?= $country=='es' ? 'selected' : ''?>>Spain</option>
-                        <option value='fr' <?= $country=='fr' ? 'selected' : ''?>>France</option>
-                        <option value='it' <?= $country=='it' ? 'selected' : ''?>>Italy</option>
+                        <option value='us' <?= $country=='us' ? 'selected' : ''?>>US</option>
+                        <option value='uk' <?= $country=='uk' ? 'selected' : ''?>>UK</option>
+                        <option value='ca' <?= $country=='ca' ? 'selected' : ''?>>CA</option>
+                        <option value='mx' <?= $country=='mx' ? 'selected' : ''?>>MX</option>
+                        <option value='es' <?= $country=='es' ? 'selected' : ''?>>ES</option>
+                        <option value='fr' <?= $country=='fr' ? 'selected' : ''?>>FR</option>
+                        <option value='it' <?= $country=='it' ? 'selected' : ''?>>IT</option>
                     </select>
                 </td>
             </tr>
