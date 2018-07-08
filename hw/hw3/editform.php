@@ -129,7 +129,7 @@
             &nbsp;&nbsp;
             Form</h3>
         </nav>
-        <h3> <?= !isset($id) ? 'Add' : 'Update';?> Contact </h3>
+        <h3> <?= (!isset($id) OR $id == NULL) ? 'Add' : 'Update';?> Contact </h3>
         
     <?php
         /*
