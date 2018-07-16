@@ -7,7 +7,7 @@
     
     if(!isset($_SESSION['adminName']))
     {
-        header("Location:login.php");
+        header("Location:index.php");
     }
 
     $sql = "DELETE FROM om_product WHERE productId = " . $_GET['productId'];

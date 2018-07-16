@@ -6,7 +6,7 @@
     // check for login
     if(!isset($_SESSION['adminName']))
     {
-        header("Location:login.php");
+        header("Location:index.php");
     }
     
     $conn = getDatabaseConnection();
@@ -72,17 +72,35 @@
     }
 
 ?>
-
-<form>
-    <input type="hidden" name="productId" value="<?=$product['productId']?>"/>
-    <strong>Product Name</strong> <input type="text" class="form-control" name="productName" value="<?=$product['productName']?>"><br />
-    <strong>Description</strong> <textarea name="productDescription" class="form-control" cols="50" rows="4"><?=$product['productDescription']?></textarea><br />
-    <strong>Price</strong> <input type="text" class="form-control" name="price" value="<?=$product['price']?>"/><br />
-    <strong>Category</strong> <select name="catId" class="form-control">
-        <option value="">Select One</option>
-        <?php getCategories($product['catId']); ?>
-    </select><br />
-    
-    <strong>Set Image URL</strong> <input type="text" id="productImage" name="productImage" class="form-control" value="<?=$product['productImage']?>"/><br />
-    <input type="submit" name="updateProduct" class="btn btn-primary" value="Update Product"/>
-</form>
+<html>
+    <head>
+        <title>Admin - Update Product</title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+    </head>
+    <body>
+        <div class="user-display">
+            <form action="logout.php">Welcome - <?=$_SESSION['adminName']?>&nbsp;&nbsp;
+                <input type="submit" class="btn btn-secondary" id="beginning" name="logout" value="Logout" />
+            </form>
+        </div>
+        <h1>Admin</h1><h2>Update Product</h2>
+        <br />
+        <form>
+            <input type="hidden" name="productId" value="<?=$product['productId']?>"/>
+            <strong>Product Name</strong> <input type="text" class="form-control" name="productName" value="<?=$product['productName']?>"><br />
+            <strong>Description</strong> <textarea name="productDescription" class="form-control" cols="50" rows="4"><?=$product['productDescription']?></textarea><br />
+            <strong>Price</strong> <input type="text" class="form-control" name="price" value="<?=$product['price']?>"/><br />
+            <strong>Category</strong> <select name="catId" class="form-control">
+                <option value="">Select One</option>
+                <?php getCategories($product['catId']); ?>
+            </select><br />
+            
+            <strong>Set Image URL</strong> <input type="text" id="productImage" name="productImage" class="form-control" value="<?=$product['productImage']?>"/><br />
+            <br />
+            <input type="submit" name="updateProduct" class="btn btn-primary" value="Update Product"/>
+            &nbsp;&nbsp;
+            <a href="admin.php" alt="Cancel">Cancel</a>
+        </form>
+    </body>
+</html>

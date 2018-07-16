@@ -1,7 +1,7 @@
 body {
     text-align: center;
     font-family: 'Noto Serif', serif;
-    width: 1000px;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -14,7 +14,7 @@ h1 {
 a {
     color: grey;
 }
-a.visited {
+.visited {
     color: grey;
 }
 
@@ -67,4 +67,14 @@ div.searchResults {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
+}
+
+div.user-display {
+    text-align: right;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+btn {
+    text-align: center;
 }

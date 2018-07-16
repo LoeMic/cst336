@@ -7,7 +7,7 @@
     
     if(!isset($_SESSION['adminName']))
     {
-        header("Location:login.php");
+        header("Location:index.php");
     }
     
     function displayAllProducts()
@@ -33,17 +33,20 @@
             }
         </script>
         <title>Admin - Product Management</title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     </head>
     <body>
-        <h1>Admin - Product Management</h1>
+        <div class="user-display">
+            <form action="logout.php">Welcome - <?=$_SESSION['adminName']?>&nbsp;&nbsp;
+                <input type="submit" class="btn btn-secondary" id="beginning" name="logout" value="Logout" />
+            </form>
+        </div>
+        <h1>Admin</h1><h2>Product Management</h2>
         <br />
-<form action="logout.php">
-    <input type="submit" class="btn btn-secondary" id="beginning" name="logout" value="Logout" />
-</form>
-<br />
-<form action="addProduct.php">
-    <input type="submit" class="btn btn-secondary" id="beginning" name="addproduct" value="Add Product" />
-</form>
+        <form action="addProduct.php">
+            <input type="submit" class="btn btn-secondary" id="beginning" name="addproduct" value="Add Product" />
+        </form>
 
 <?php
 
@@ -69,7 +72,7 @@
         echo "<td>".$record['productName']."</td>";
         echo "<td>".$record['productDescription']."</td>";
         echo "<td>".$record['price']."</td>";
-        echo "<td><a class='btn btn-primary' href='updateProduct.php?productId=".$record['productId']."'>Update</a></td>";
+        echo "<td><a class='btn btn-primary' href='updateProduct.php?productId=".$record['productId']."'><button>Update</button></a></td>";
         
         echo "<form action='deleteProduct.php' onsubmit='return confirmDelete()'>";
         echo "<input type='hidden' name='productId' value='" . $record['productId'] . "'></input>";
