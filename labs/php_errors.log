@@ -30,3 +30,25 @@
 [08-Jul-2018 06:49:50 UTC] PHP Fatal error:  Undefined class constant 'fetchAll' in /home/ubuntu/workspace/cst336/labs/lab5/purchaseHistory.php on line 19
 [08-Jul-2018 06:49:50 UTC] PHP Stack trace:
 [08-Jul-2018 06:49:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/purchaseHistory.php:0
+[16-Jul-2018 05:24:35 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/admin.php on line 16
+[16-Jul-2018 05:24:35 UTC] PHP Stack trace:
+[16-Jul-2018 05:24:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/admin.php:0
+[16-Jul-2018 05:24:35 UTC] PHP   2. displayAllProducts() /home/ubuntu/workspace/cst336/labs/lab6/admin.php:26
+[16-Jul-2018 05:25:22 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/admin.php on line 17
+[16-Jul-2018 05:25:22 UTC] PHP Stack trace:
+[16-Jul-2018 05:25:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/admin.php:0
+[16-Jul-2018 05:25:22 UTC] PHP   2. displayAllProducts() /home/ubuntu/workspace/cst336/labs/lab6/admin.php:27
+[16-Jul-2018 05:27:46 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/admin.php on line 18
+[16-Jul-2018 05:27:46 UTC] PHP Stack trace:
+[16-Jul-2018 05:27:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/admin.php:0
+[16-Jul-2018 05:27:46 UTC] PHP   2. displayAllProducts() /home/ubuntu/workspace/cst336/labs/lab6/admin.php:28
+[16-Jul-2018 07:15:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'productDescription' cannot be null' in /home/ubuntu/workspace/cst336/labs/lab6/addProduct.php:53
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab6/addProduct.php(53): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab6/addProduct.php on line 53
+[16-Jul-2018 07:16:34 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'price' cannot be null' in /home/ubuntu/workspace/cst336/labs/lab6/addProduct.php:53
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab6/addProduct.php(53): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab6/addProduct.php on line 53
