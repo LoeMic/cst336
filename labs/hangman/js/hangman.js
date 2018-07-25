@@ -57,7 +57,7 @@ function getCookie()
     guessedWords = document.cookie.replace(/(?:(?:^|.*;\s*)guessed\s*\=\s*([^;]*).*$)|^.*$/, "$1");
     
     // testing
-    alert(guessedWords);
+    //alert(guessedWords);
     
     $("#guessed").append(guessedWords);
 }
