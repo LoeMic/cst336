@@ -1,0 +1,58 @@
+[23-Jul-2018 03:00:12 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 107 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 13
+[23-Jul-2018 03:00:12 UTC] PHP Stack trace:
+[23-Jul-2018 03:00:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:00:12 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:107
+[23-Jul-2018 03:00:59 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 108 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 13
+[23-Jul-2018 03:00:59 UTC] PHP Stack trace:
+[23-Jul-2018 03:00:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:00:59 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:108
+[23-Jul-2018 03:04:04 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 108 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 13
+[23-Jul-2018 03:04:04 UTC] PHP Stack trace:
+[23-Jul-2018 03:04:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:04:04 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:108
+[23-Jul-2018 03:05:47 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 108 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 13
+[23-Jul-2018 03:05:47 UTC] PHP Stack trace:
+[23-Jul-2018 03:05:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:05:47 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:108
+[23-Jul-2018 03:07:02 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 108 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 13
+[23-Jul-2018 03:07:02 UTC] PHP Stack trace:
+[23-Jul-2018 03:07:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:07:02 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:108
+[23-Jul-2018 03:12:02 UTC] PHP Fatal error:  Call to undefined function getProducts() in /home/ubuntu/workspace/cst336/final/index.php on line 18
+[23-Jul-2018 03:12:02 UTC] PHP Stack trace:
+[23-Jul-2018 03:12:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:12:04 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 110 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 13
+[23-Jul-2018 03:12:04 UTC] PHP Stack trace:
+[23-Jul-2018 03:12:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:12:04 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:110
+[23-Jul-2018 03:26:28 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 110 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 13
+[23-Jul-2018 03:26:28 UTC] PHP Stack trace:
+[23-Jul-2018 03:26:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:26:28 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:110
+[23-Jul-2018 03:26:30 UTC] PHP Fatal error:  Call to undefined function getProducts() in /home/ubuntu/workspace/cst336/final/index.php on line 18
+[23-Jul-2018 03:26:30 UTC] PHP Stack trace:
+[23-Jul-2018 03:26:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:26:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY Name' at line 1' in /home/ubuntu/workspace/cst336/final/functions.php:59
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final/functions.php(59): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final/index.php(18): getProducts('', '')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/final/functions.php on line 59
+[23-Jul-2018 03:27:49 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 110 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 14
+[23-Jul-2018 03:27:49 UTC] PHP Stack trace:
+[23-Jul-2018 03:27:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:27:49 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:110
+[23-Jul-2018 03:27:52 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 110 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 14
+[23-Jul-2018 03:27:52 UTC] PHP Stack trace:
+[23-Jul-2018 03:27:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:27:52 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:110
+[23-Jul-2018 03:27:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY Name' at line 1' in /home/ubuntu/workspace/cst336/final/functions.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final/functions.php(62): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final/index.php(18): getProducts('', '')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/final/functions.php on line 62
+[23-Jul-2018 03:28:58 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 110 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 14
+[23-Jul-2018 03:28:58 UTC] PHP Stack trace:
+[23-Jul-2018 03:28:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[23-Jul-2018 03:28:58 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:110

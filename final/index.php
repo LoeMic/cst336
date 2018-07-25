@@ -10,13 +10,12 @@
         $_SESSION['cart'] = array();
     }
 
-    if (isset($_GET['query']))
+    if (isset($_GET['pName']) OR isset($_GET['pCat']))
     {
-        // get access to the api
-        include './wmapi.php';
+        $name = $_GET['pName'];
+        $categoryID = $_GET['pCat'];
         
-        $query = $_GET['query'];
-        $items = getProducts($query);
+        $items = getProducts($name, $categoryID);
         
         // test prints
         /*
@@ -26,6 +25,11 @@
         print_r($items);
         */
         //name, salePrice, thumbnailImage, itemId
+    }
+    else
+    {
+        // pull without a name or category
+        
     }
     
     // check to see if an item has been added to the cart
@@ -60,7 +64,6 @@
 
 ?>
 
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -69,41 +72,51 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <title>Products Page</title>
+        
+        <style>
+            @import "css/styles.css";
+        </style>
+        
+        <title> E-Shop Site </title>
     </head>
     <body>
-    <div class='container'>
-        <div class='text-center'>
-            
-            <!-- Bootstrap Navagation Bar -->
-            <nav class='navbar navbar-default navbar-right'>
-                <div class='container-fluid'>
-                    <div class='navbar-header'>
-                        <a class='navbar-brand' href='#'>Shopping Land</a>
-                    </div>
-                    <ul class='nav navbar-nav navbar-right'>
+        <div class='container'>
+            <div class="text-center">
+                <!-- cart image -->
+                <!-- number of items in cart -->
+                <!-- Bootstrap Navagation Bar -->
+                <nav class='navbar navbar-default - navbar-right'>
+                    <ul class='nav navbar-nav'>
                         <li><a href='index.php'>Home</a></li>
-                        <li><a href='scart.php'>
+                        <li><a href='cart.php'>
                             <span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span>
                             Cart: <?php displayCartCount(); ?> </a></li>
+                        <li><a href='login.php'>Login</a></li>
                     </ul>
-                </div>
-            </nav>
-            <br /> <br /> <br />
-            
-            <!-- Search Form -->
-            <form enctype="text/plain">
-                <div class="form-group">
-                    <label for="pName">Product Name</label>
-                    <input type="text" class="form-control" name="query" id="pName" placeholder="Name">
-                </div>
-                <input type="submit" value="Submit" class="btn btn-default">
+                </nav>
                 <br /><br />
-            </form>
-            
-            <!-- Display Search Results -->
-            <?php displayResults(); ?>
+                <div class="page-header"><h1> E-Shop Site </h1></div>
+                <!-- display the list of items and the search controls -->
+                <!-- Search Form -->
+                
+                <form enctype="text/plain">
+                    <div class="form-group">
+                        <label for="pName">Product Name: </label>
+                        <input type="text" class="form-horizontal" name="pName" id="pName" placeholder="Name">
+                        <br />
+                        <label for="pCat">Product Category: </label>
+                        <select class="form-horizontal" name="pCat" id="pCat">
+                            <option value=""> -- Select -- </option>
+                            <?php getCategories() ?>
+                        </select>
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-default">
+                    <br /><br />
+                </form>
+                
+                <!-- Display Search Results -->
+                <?php displayResults(); ?>
+            </div>
         </div>
-    </div>
     </body>
-</html>
+<html>
