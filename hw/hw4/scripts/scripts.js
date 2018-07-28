@@ -29,10 +29,21 @@ function checkUserCookie()
     }
 }
 
-function saveContact(id, fname, lname, phone, email, contactPref, country)
+function saveContact(id, fname, lname, phone, email, pref, country)
 {
+    /*
+    alert("saveContact:\n" + 
+            "fname = " + fname + "\n" +
+            "lname = " + lname + "\n" +
+            "phone = " + phone + "\n" +
+            "email = " + email + "\n" +
+            "pref = " + pref + "\n" +
+            "country = " + country);
+    */
+
     var success = false;
-    
+    var contact;
+
     // test for insert / update
     if (id == null || id <= 0)
     {
@@ -42,29 +53,34 @@ function saveContact(id, fname, lname, phone, email, contactPref, country)
         // increment the maxId value
         maxId++;
 
-        // create a new contact element        
-        var contact = {id: maxId, firstName: fname, lastName: lname, phone: phone, email: email, contactPref: contactPref, country: country};
+        // create a new contact element
+        contact = {id: maxId, firstName: fname, lastName: lname, phone: phone, email: email, contactPref: pref, country: country};
         
         // save the contact in list
         contacts.contacts.push(contact);
-        
-        // save the updated maxId value
-        saveMaxId(maxId);
+        setContactsList(contacts);
         
         success = true;
     }
     else
     {
-        var updated = false;
-        var contact = null;
-
         $.each(contacts, function() {
             $.each(this, function() {
-               if (this.id == id)
-               {
-                   found = true;
-                   contact = this;
-                   return false;
+                if (this.id == id)
+                {
+                    contact = this;
+
+                    // update the values                    
+                    contact.firstName = fname;
+                    contact.lastName = lname;
+                    contact.phone = phone;
+                    contact.email = email;
+                    contact.contactPref = Number(pref);
+                    contact.country = country;
+                    
+                    found = true;
+                    success = true;
+                    return false;
                }
             });
     
@@ -74,36 +90,23 @@ function saveContact(id, fname, lname, phone, email, contactPref, country)
                 return false;
             }
         });
-        
-        if (contact != null)
-        {
-            contact.firstName = firstName;
-            contact.lastName = lastName;
-            contact.phone = phone;
-            contact.email = email;
-            contact.contactPref = contactPref;
-            contact.country = country;
-            
-            success = true;
-        }
-
-        // save data in cookie
-        setCookie();
-
-        return updated;
     }
+    
+    // save data in cookie
+    setContactsList(contacts);
+
+    return success;
 }
 
 function getContactPreferenceDisplay(pref)
 {
-    //alert(pref);
-    switch (pref)
+    switch (String(pref))
     {
-        case 0:
+        case "0":
             return 'phone';
-        case 1:
+        case "1":
             return 'email';
-        case 2:
+        case "2":
             return 'none';
         default:
             return 'n/a';
@@ -240,17 +243,22 @@ function writeContactsList()
     $("#contactDisplay").html(str);
 }
 
-
 // retrieve the maxid value from cookie
 function getMaxId()
 {
-    return getCookie(maxIdCookie);
-}
-
-// save the updated maxId value in the cookie
-function saveMaxId(maxId)
-{
-    setCookie(maxIdCookie, maxId);
+    var contacts = getContactsList();
+    var maxId = 0;
+    
+    $.each(contacts, function() {
+        $.each(this, function() {
+            if (maxId < this.id)
+            {
+                maxId = this.id;
+            }
+        });
+    });
+    
+    return maxId;
 }
 
 function getContactsList()
@@ -267,7 +275,13 @@ function setContactsList(contacts)
 // set the cookie value
 function setCookie(key, value)
 {
-    var expires = new Date();
+    /*
+    // test
+    alert("key: " + key + "\n" +
+            "value: " + value);
+    */
+    
+    //var expires = new Date();
     //expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
     document.cookie = key + '=' + value;    // + ';expires=' + expires.toUTCString();
 }
@@ -277,9 +291,4 @@ function getCookie(key)
 {
     var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
     return keyValue ? keyValue[2] : null;
-}
-
-function validateFormData()
-{
-    
 }
