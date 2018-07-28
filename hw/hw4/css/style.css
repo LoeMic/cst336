@@ -1,0 +1,62 @@
+body {
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 0px;
+    color: black;
+}
+
+a {
+    color: grey;
+}
+a.visited {
+    color: grey;
+}
+
+hr {
+    width:75%;
+}
+
+#hr_footer {
+    width:75%;   
+}
+
+footer {
+    clear: left;
+    font-size:8px;
+    color: grey;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid black;
+}
+
+td.contact {
+    border: 1px solid black;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+}
+
+th.chead {
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+}
+
+.req {
+    color: red;
+}
+
+.err {
+    color: red;
+}

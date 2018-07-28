@@ -1,0 +1,263 @@
+<html>
+    <head>
+        <title> HW4 - Contact Management - JQuery </title>
+        <meta charset="utf-8" />
+        <style>
+            @import "css/style.css";
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="scripts/scripts.js"></script>
+        
+        <script language="javascript">
+            // get the passed in id
+            // retrieve the contact for this id
+            // display the form for this id
+            
+            // or its new
+            /*
+            var urlParams = new URLSearchParams(window.location.search);
+
+            console.log(urlParams.has('post')); // true
+            console.log(urlParams.get('action')); // "edit"
+            console.log(urlParams.getAll('action')); // ["edit"]
+            console.log(urlParams.toString()); // "?post=1234&action=edit"
+            */
+            
+            var urlParams = new URLSearchParams(window.location.search);
+            var id = urlParams.get('id');
+            
+            /*
+            // testing
+            alert("id = " + id);
+            */
+            
+            // if submission from form, validate input
+            var validForm = true;
+            var saveResponse = "";
+            var fnameErr = "";
+            var lnameErr = "";
+            var phoneErr = "";
+            var emailErr = "";
+            var contactPrefErr = "";
+            
+            $(document).ready(function()
+            {
+                checkUserCookie();
+                writeContactsList();
+                
+                if (urlParams.has("add"))
+                {
+                    $("#heading").text("Add");
+                    $("#saveBtn").text("Add");
+                }
+                else
+                {
+                    $("#heading").text("Update");
+                    $("#saveBtn").text("Update");
+                    
+                    var contact = getContactById(id);
+                    /*
+                    alert("id = " + contact.id + "\n" +
+                            "fname = " + contact.firstName + "\n" +
+                            "lname = " + contact.lastName + "\n" +
+                            "phone = " + contact.phone + "\n" +
+                            "email = " + contact.email + "\n" +
+                            "pref = " + contact.contactPref + "\n" +
+                            "country = " + contact.country);
+                    
+                    alert(contact.country.toLowerCase());
+                    */
+                    
+                    // set the form values for edit
+                    $("#fname").val(contact.firstName);
+                    $("#lname").val(contact.lastName);
+                    $("#phone").val(contact.phone);
+                    $("#email").val(contact.email);
+                    $("#pref[value='" + contact.contactPref + "']").prop('checked', true);
+                    $("#country").val(contact.country.toLowerCase());
+                }
+                
+                $("#saveBtn").click(function()
+                {
+                    var fname = $("#fname").val();
+                    var lname = $("#lname").val();
+                    var phone = $("#phone").val();
+                    var email = $("#email").val();
+                    var pref = $("#pref:checked").val();
+                    var country = $("#country").val();
+                    
+                    /*
+                    alert("save clicked:\n" + 
+                            "fname = " + fname + "\n" +
+                            "lname = " + lname + "\n" +
+                            "phone = " + phone + "\n" +
+                            "email = " + email + "\n" +
+                            "pref = " + contactPref + "\n" +
+                            "country = " + country);
+                    */
+
+                    if (fname == "")
+                    {
+                        fnameErr = '<br />First Name is required';
+                        valid = false;
+                    }
+                    
+                    if (lname == "")
+                    {
+                        lnameErr = '<br />Last Name is required';
+                        valid = false;
+                    }
+                    
+                    if (phone != "" && phone.match('/^\d+$/'))
+                    {
+                        phoneErr = '<br />Submit numbers only';
+                        valid = false;
+                    }
+                    
+                    if (email == "")
+                    {
+                        emailErr = '<br />Email is required';
+                        valid = false;
+                    }
+                    if (pref == "")
+                    {
+                        prefErr = '<br />Contact Preference is required';
+                        valid = false;
+                    }
+                    if (pref == "0" && phone == "")
+                    {
+                        prefErr = '<br />Cannot select phone if no phone entered';
+                        valid = false;
+                    }
+                    
+                    if (valid)
+                    {
+                        saveContact(id, fname, lname, phone, email, pref, country);
+                        saveResponse = "<br/>Saved successfully<br/>";
+                        
+                        // if this was a prior add, the id would not be set
+                        if (id == "" || id == null)
+                        {
+                            id = getMaxId();
+                        }
+                    }
+                    else
+                    {
+                        saveResponse = "<br/>Fix errors and retry<br/>";
+                    }
+
+                    $("#err").html = saveResponse;
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <header>
+        <h1> HW4 - Contact Management - JQuery </h1>
+        </header>
+        <nav>
+            <h3><a href="index.html">Contact List</a>
+            &nbsp;&nbsp;
+            Form</h3>
+        </nav>
+        <h3> <span id="heading">Add</span> Contact </h3>
+    
+        <!--<form method="post">-->
+        <table>
+            <!--<input type='hidden' name='id' id='id' value=''></input>-->
+            <tr>
+                <td class='contact'>
+                    <label for='fname'>First Name: </label><span class='req'>*</span>
+                </td>
+                <td class='contact'>
+                    <input type='text' name='fname' id='fname' value=''></input>
+                    <span class='err'></span>
+                </td>
+            </tr>
+            <tr>
+                <td class='contact'>
+                    <label for='lname'>Last Name: </label><span class='req'>*</span>
+                </td>
+                <td class='contact'>
+                    <input type='text' name='lname' id='lname' value=''></input>
+                    <span class='err'></span>
+                </td>
+            </tr>
+            <tr>
+                <td class='contact'>
+                    <label for='phone'>Phone Number: </label>
+                </td>
+                <td class='contact'>
+                    <input type='text' name='phone' id='phone' value=''></input>
+                    <span class='err'></span>
+                </td>
+            </tr>
+            <tr>
+                <td class='contact'>
+                    <label for='email'>Email Address: </label><span class='req'>*</span>
+                </td>
+                <td class='contact'>
+                    <input type='text' name='email' id='email' value=''></input>
+                    <span class='err'></span>
+                </td>
+            </tr>
+            <tr>
+                <td class='contact'>
+                    <label for='pref'>Contact Preference: </label><span class='req'>*</span>
+                </td>
+                <td class='contact'>
+                    <input type='radio' name='pref' id='pref' value='0'>phone</input><br/>
+                    <input type='radio' name='pref' id='pref' value='1'>email</input><br/>
+                    <input type='radio' name='pref' id='pref' value='2'>none</input>
+                    <span class='err'></span>
+                </td>
+            </tr>
+            <tr>
+                <td class='contact'>
+                    <label for='country'>Country: </label>
+                </td>
+                <td class='contact'>
+                    <select name='country' id='country'>
+                        <option value=''>Select an option -- </option>
+                        <option value='us'>US</option>
+                        <option value='uk'>UK</option>
+                        <option value='ca'>CA</option>
+                        <option value='mx'>MX</option>
+                        <option value='es'>ES</option>
+                        <option value='fr'>FR</option>
+                        <option value='it'>IT</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        
+        <br/>
+        <button name="saveBtn" id="saveBtn" class="btn btn-success">Add</button> &nbsp;&nbsp; 
+        <button name="cancelBtn" id="cancelBtn" class="btn btn-success" onclick="window.location.replace('index.html');">Cancel</button>
+        
+        <!--</form>-->
+        
+        <span class="err"></span>
+
+        <!-- The footer goes inside the body but not always -->
+        <footer>
+            <br /><br />
+            <hr id="hr_footer" />
+            
+            page views: <script language="javascript">document.write(Math.floor((Math.random() * 1000) + 1))</script>
+            
+            <br />
+            <p id="footer">
+                &copy; Mike Loeser - 2018<br>
+                The information provided here is for academic purposes only
+                <br /><br />
+                <a href="http://www.csumb.edu"><img src="img/csumb_icon.png" alt="CSU Monterey Bay"></a>
+            </p>
+        </footer>
+        <!-- closing footer -->
+    </body>
+</html>
