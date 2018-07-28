@@ -6,7 +6,7 @@ var maxIdCookie = "MAX_ID";
 var contactsCookie = "CONTACTS_LIST";
 
 // start with string contact, convert to object, convert back to string and store in cookie
-var contacts = {contacts: [
+var contactsList = {contacts: [
     {id: 1, firstName:"Mike", lastName:"Watt", phone:"9995551212", email:"m_watt@test.com", contactPref: 1, country:"us"},
     {id: 2, firstName:"D", lastName:"Boone", phone:"2123456789", email:"d_boone@test.com", contactPref: 0, country:"us"},
     {id: 3, firstName:"J", lastName:"Mascis", phone:"5555555555", email:"j_mascis@test.com", contactPref: 2, country:"us"},
@@ -20,12 +20,12 @@ function checkUserCookie()
     var tempContacts = getContactsList();
     if (tempContacts == null)
     {
-        setContactsList(contacts);
+        setContactsList(contactsList);
     }
     else
     {
         // update to use the full contact list
-        contacts = tempContacts;
+        contactsList = tempContacts;
     }
 }
 
@@ -57,14 +57,14 @@ function saveContact(id, fname, lname, phone, email, pref, country)
         contact = {id: maxId, firstName: fname, lastName: lname, phone: phone, email: email, contactPref: pref, country: country};
         
         // save the contact in list
-        contacts.contacts.push(contact);
-        setContactsList(contacts);
+        contactsList.contacts.push(contact);
+        setContactsList(contactsList);
         
         success = true;
     }
     else
     {
-        $.each(contacts, function() {
+        $.each(contactsList, function() {
             $.each(this, function() {
                 if (this.id == id)
                 {
@@ -93,7 +93,7 @@ function saveContact(id, fname, lname, phone, email, pref, country)
     }
     
     // save data in cookie
-    setContactsList(contacts);
+    setContactsList(contactsList);
 
     return success;
 }
@@ -143,7 +143,7 @@ function getContactById(id)
     var found = false;
     var contact = null;
 
-    $.each(contacts, function() {
+    $.each(contactsList, function() {
         $.each(this, function() {
             contact = this;
        
@@ -168,17 +168,17 @@ function deleteContact(id)
 {
     var index = 0;
     var found = false;
+    var contact = null;
 
-    $.each(contacts, function() {
+    $.each(contactsList, function() {
         $.each(this, function() {
-            var contact = this;
-       
-           if (contact.id == id)
-           {
-               found = true;
-               return false;
-           }
-           index++;
+            if (this.id == id)
+            {
+                contact = this;
+                found = true;
+                return false;
+            }
+            index++;
         });
 
         if (found)
@@ -190,7 +190,9 @@ function deleteContact(id)
     // see if matching id found
     if (found)
     {
-        delete contacts[index];
+        contactsList.contacts.splice(index,1);
+        setContactsList(contactsList);
+
         writeContactsList();
         return true;
     }
@@ -213,7 +215,7 @@ function writeContactsList()
             "</tr>";
 
     // loop through the contact list
-    $.each(contacts, function() {
+    $.each(contactsList, function() {
         $.each(this, function() {
             var contact = this;
             
@@ -246,10 +248,10 @@ function writeContactsList()
 // retrieve the maxid value from cookie
 function getMaxId()
 {
-    var contacts = getContactsList();
+    var contactsList = getContactsList();
     var maxId = 0;
     
-    $.each(contacts, function() {
+    $.each(contactsList, function() {
         $.each(this, function() {
             if (maxId < this.id)
             {
@@ -267,9 +269,9 @@ function getContactsList()
     return JSON.parse(contactsJson);
 }
 
-function setContactsList(contacts)
+function setContactsList(contactsList)
 {
-    setCookie(contactsCookie, JSON.stringify(contacts))
+    setCookie(contactsCookie, JSON.stringify(contactsList))
 }
 
 // set the cookie value
