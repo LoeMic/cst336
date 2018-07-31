@@ -13,21 +13,21 @@ echo 'Mike Loeser CST 336 - Internet Programming';
 <br>
 <a href="labs/lab1"> Lab 1 </a>
 <br>
-<a href="lab/lab2a"> Lab 2a </a>
+<a href="labs/lab2a"> Lab 2a </a>
 <br>
-<a href="lab/lab2"> Lab 2 </a>
+<a href="labs/lab2"> Lab 2 </a>
 <br>
-<a href="lab/lab3"> Lab 3 </a>
+<a href="labs/lab3"> Lab 3 </a>
 <br>
-<a href="lab/lab4"> Lab 4 </a>
+<a href="labs/lab4"> Lab 4 </a>
 <br>
-<a href="lab/lab5"> Lab 5 </a>
+<a href="labs/lab5"> Lab 5 </a>
 <br>
-<a href="lab/lab6"> Lab 6 </a>
+<a href="labs/lab6"> Lab 6 </a>
 <br>
-<a href="lab/hangman"> Hangman </a>
+<a href="labs/hangman"> Hangman </a>
 <br>
-<a href="lab/lab8"> Lab 8 </a>
+<a href="labs/lab8"> Lab 8 </a>
 <br><br>
 <h1>Homework</h1>
 <br>
