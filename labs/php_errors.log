@@ -52,3 +52,9 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336/labs/lab6/addProduct.php(53): PDOStatement->execute(Array)
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336/labs/lab6/addProduct.php on line 53
+[31-Jul-2018 05:51:57 UTC] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in /home/ubuntu/workspace/cst336/labs/lab8/quiz.php on line 7
+[31-Jul-2018 05:51:57 UTC] PHP Stack trace:
+[31-Jul-2018 05:51:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab8/index.php:0
+[31-Jul-2018 05:51:57 UTC] PHP   2. displayQuiz() /home/ubuntu/workspace/cst336/labs/lab8/index.php:35
+[31-Jul-2018 07:19:37 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/ubuntu/workspace/cst336/labs/lab8/logout.php on line 4
+[31-Jul-2018 07:20:40 UTC] PHP Parse error:  syntax error, unexpected '[', expecting '(' in /home/ubuntu/workspace/cst336/labs/lab8/logout.php on line 4

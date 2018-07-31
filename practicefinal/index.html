@@ -1,0 +1,173 @@
+<?php
+    session_start();
+    
+?>
+
+<html>
+    <head>
+        <title> Practice Final </title>
+        <meta charset="utf-8" />
+        <style>
+            @import "css/style.css";
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+        
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script language="javascript">
+            // write the display
+            $(document).ready(function()
+            {
+                
+                $("#submit").click(function ()
+                    {
+                        // do some work here...
+                        //alert("clicked!");
+                        
+                        // grab the references
+                        var response = $("#response");
+                        
+                        var email = $("#email");
+                        var q1 = $("#q1Txt");
+                        var q2 = $("#q2Txt");
+                        
+                        var q1Correct = false;
+                        var q2Correct = false;
+                        
+                        var q1Err = $("#q1Err");
+                        var q2Err = $("#q2Err");
+                        
+                        var score = 0;
+                        
+                        // reset display elements
+                        q1Err.html("");
+                        q2Err.html("");
+                        response.html("");
+                        
+                        // test question 1
+                        if (eval(q1.val()))
+                        {
+                            q1Correct = true;
+                            score += 5;
+                        }
+                        else
+                        {
+                            q1Correct = false;
+                            q1Err.html("this one is false");
+                        }
+                        
+                        // test question 2
+                        if (eval(q2.val()))
+                        {
+                            q2Correct = true;
+                            score += 5;
+                        }
+                        else
+                        {
+                            q2Correct = false;
+                            q2Err.html("this one is false");
+                        }
+                        
+                        if (q1Correct && q2Correct)
+                        {
+                            response.html("<h2>Both are correct!</h2>");
+                        }
+                        else
+                        {
+                            response.html("<h2>Something is not right!</h2>");
+                            response.css("class","err")
+                        }
+                        
+                        $.ajax({
+                            type: "GET",
+                            dataType: "json",
+                            url: "app.php",
+                            data: {"action": "savescore", "email": email.val(), "score": score},
+                            success: function(data){
+                                
+                                $("#ajaxResponse").html("Favorite beverage: " + data["favorite_beverage"] + "<br />");
+                                
+                                //Favorite restaurant: " + data["favorite_restaurant"] + "<br />Gender: " + data["gender"] + "<br />JSON: " + data["json"]);
+                                
+                                /*
+                                alert("data = " + JSON.stringify(obj) + "\n" +
+                                        "------------\n" +
+                                        "attempt = " + obj.attempt + "\n" +
+                                        "email = " + obj.email + "\n" +
+                                        "numAttempts = " + obj.numAttempts
+                                        );
+                                
+                                $("#attempt").html(data.objData.attempt);
+                                $("#last").html(data.objData.last);
+                                $("#numAttempts").html(data.objData.numAttempts);
+                                */
+                            }
+                        });
+
+                        /*
+                            //alert("Received a response!\n\n" + result);
+                            
+                            //$("#ajaxResponse").html("<pre>" + result + "</pre>");
+                            
+                            var obj = result["objData"];
+                            
+                            $("#ajaxResponse").html(result["objData"].json);
+                            
+                            // set the display values
+                            $("#attempt").html(result["attempt"]);
+                            $("#last").html(result["last"]);
+                            $("#numAttempts").html(result["numAttempts"]);
+                        }});
+                        */
+                    });
+                    
+                /*
+                // ajax example
+                
+                $("button").click(function(){
+                    $.ajax({url: "demo_test.txt", success: function(result){
+                        $("#div1").html(result);
+                    }});
+                });
+                
+                */
+            });
+            
+        </script>
+    </head>
+    <body>
+        <header>
+        <h1> Practice Final </h1>
+        </header>
+        
+        <!-- create the form -->
+        <label for="email">Provide an Email Address</label>
+        <input type="text" id="email" name="email">
+        <br/><br/>
+        
+        <label for="q1Txt">Question 1</label>
+        <input type="text" id="q1Txt" name="q1Txt" class="question"/>
+        <span id="q1Err"></span>
+        <br />
+        <label for="q2Txt">Question 2</label>
+        <input type="text" id="q2Txt" name="q2Txt" class="question"/>
+        <span id="q2Err"></span>
+        <br /><br />
+        <button id="submit" value="submit">Submit</button>
+        
+        <br />
+        <span class="response" id="response"></span>
+        
+        <br /><br />
+        Response: <span id="ajaxResponse"></span><br /><br />
+        
+        Attempt Score: <span class="response" id="attempt"></span>&nbsp;&nbsp;
+        Last Attempt: <span class="response" id="last"></span>&nbsp;&nbsp;
+        Number of Attempts: <span class="response" id="numAttempts"></span>
+    </body>
+</html>
