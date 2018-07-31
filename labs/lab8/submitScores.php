@@ -12,7 +12,7 @@ $sql = "INSERT INTO scores (username, score)
 
 $data = array(
             ":username" => $_SESSION['username'],
-            ":score" => score
+            ":score" => $score
         );
 $stmt = $connect->prepare($sql);
 $stmt->execute($data);
