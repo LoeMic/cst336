@@ -20,7 +20,122 @@ h1 {
 }
 
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
-  border-bottom: 0px solid #eee;
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 0px solid #eee;
 }
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 0px solid black;
+    vertical-align: top;
+}
+
+th {
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+td.product {
+    border: 1px solid lightgray;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-size: 12px;
+}
+.productImage {
+    
+}
+.productName {
+    font-weight: bold;
+    display:inline-block;
+    padding-bottom: 5px;
+}
+.productBasePrice {
+    text-align: right;
+    text-decoration: line-through;
+}
+.productSalePrice {
+    text-align: right;
+    font-weight: bold;
+    color: darkred;
+}
+.productDesc {
+    font-size: 10px;
+    display:inline-block;
+    padding-top: 5px;
+}
+.productAction {
+    display:inline-block;
+    padding-top: 10px;
+}
+
+.cart {
+    border: 1px solid lightgray;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.cartImage {
+    
+}
+.cartQuant {
+
+}
+.cartName {
+    font-weight: bold;
+    
+}
+.cartBasePrice {
+    text-align: right;
+    text-decoration: line-through;
+}
+.cartSalePrice {
+    text-align: right;
+    font-weight: bold;
+    color: darkred;
+}
+.cartDesc {
+    font-size: 10px;
+}
+
+.cartTotals {
+    font-size: 16px;
+    text-align: right;
+}
+.cartTotal {
+    text-align: right;
+    color: black;
+}
+.cartTotalSale {
+    text-align: right;
+    font-weight: bold;
+    color: darkred;
+}
+
+
+a {
+    color: grey;
+}
+.visited {
+    color: grey;
+}
+
+hr {
+    width:75%;
+}
+
+#hr_footer {
+    width:75%;   
+}
+
+footer {
+    clear: left;
+    font-size:8px;
+    color: grey;
+}
+

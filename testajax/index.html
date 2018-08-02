@@ -18,11 +18,14 @@
                         data: data,
                         success: function(data) {
                             $(".the-return").html(
-                            "Favorite beverage: " + data["favorite_beverage"] + "<br />Favorite restaurant: " + data["favorite_restaurant"] + "<br />Gender: " + data["gender"] + "<br />JSON: " + data["json"]
-                        );
+                                "Favorite beverage: " + data["favorite_beverage"] + "<br />Favorite restaurant: " + data["favorite_restaurant"] + "<br />Gender: " + data["gender"] + "<br />JSON: " + data["json"]
+                            );
 
-                        alert("Form submitted successfully.\nReturned json: " + data["json"]);
-                        var obj = json.
+                            alert("Form submitted successfully.\nReturned json: " + data["json"]);
+                            
+                            var obj = JSON.parse(data["json"]);
+                            
+                            alert(obj.favorite_beverage);
                         }
                     });
                     return false;

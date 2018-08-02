@@ -3,32 +3,7 @@
     
     // link the functions
     include 'functions.php';
-    
-    // 'removeId' in a form post is used to do a delete
-    if (isset($_POST['removeId']))
-    {
-        foreach ($_SESSION['cart'] as $itemKey => $item)
-        {
-            if ($item['id'] == $_POST['removeId'])
-            {
-                unset($_SESSION['cart'][$itemKey]);
-            }
-        }
-    }
-    
-    // 'itemId' in a form post is used to do a quantity update - should see 2 posted values
-    if (isset($_POST['itemId']))
-    {
-        foreach ($_SESSION['cart'] as &$item)
-        {
-            if ($item['id'] == $_POST['itemId'])
-            {
-                $item['quantity'] = $_POST['update'];
-            }
-        }
-    }
 ?>
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -59,10 +34,8 @@
                 
                 <br /><br />
                 
-                <!-- Display Search Results -->
-                <div class='productlist'>
-                <?php displayCart(); ?>
-                </div>
+                <!-- checkout form -->
+                
             </div>
         </div>
         

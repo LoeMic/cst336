@@ -3,11 +3,18 @@ if (is_ajax())
 {
     if (isset($_POST["action"]) && !empty($_POST["action"]))
     { //Checks if action value exists
-        $action = $_GET["action"];
+    
+        echo "action = " . $_POST["action"] . "\n\n";
+        echo "email = " . $_POST["email"] . "\n\n";
+        echo "score = " . $_POST["score"] . "\n\n";
+
+        //echo "data = " . $_POST["data"] . "\n\n";
+        //echo json_decode($_POST['data'],true);        
+        //echo "action = " . $obj.action . "\n";
+        //echo "email = " . $obj.email . "\n";
+        //echo "score = " . $obj.score . "\n";
         
-        echo "action = " . $_GET["action"];
-        echo "email = " . $_GET["email"];
-        echo "score = " . $_GET["score"];
+        $action = $_POST["action"];
         
         //Switch case for value of action
         switch($action)
@@ -16,8 +23,8 @@ if (is_ajax())
                 test_function();
                 break;
             case "savescore":
-                test_function();
-                //saveScore($_GET["email"], $_GET["score"]);
+                //echo "in savescore case\n";
+                saveScore($_POST["email"], $_POST["score"]);
                 break;
         }
     }
@@ -30,16 +37,24 @@ function is_ajax() {
 
 function saveScore($email, $score)
 {
+    //echo "in savescore function\n";
+    /*
     $return = array(
                 "email" => $email,
                 "attempt" => $score,
                 "last" => $score,
                 "numAttempts" => 199);
-    
+    */
 
-    //$return["objData"] = json_encode($return);
+    $return = $_POST;
+    $return["email"] = $email;
+    $return["attempt"] = $score;
+    $return["last"] = $score;
+    $return["numAttempts"] = 199;
+
+    $return["json"] = json_encode($return);
     
-    $_POST["json"] = json_encode($return);
+    //$_POST["json"] = json_encode($return);
     //echo json_encode($return);
 }
 
@@ -58,6 +73,6 @@ function test_function()
     $return["favorite_restaurant"] = "McDonald's";
     
     $return["json"] = json_encode($return);
-    echo json_encode($return);
+    //echo json_encode($return);
 }
 ?>

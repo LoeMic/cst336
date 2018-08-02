@@ -19,6 +19,7 @@ function test_function(){
     //if ($return["favorite_beverage"] == ""){
     // $return["favorite_beverage"] = "Coke";
     //}
+    //$return["favorite_beverage"] = "Coke";
     //$return["favorite_restaurant"] = "McDonald's";
     $return["json"] = json_encode($return);
     echo json_encode($return);

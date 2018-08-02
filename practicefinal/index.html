@@ -25,117 +25,106 @@
             {
                 
                 $("#submit").click(function ()
-                    {
-                        // do some work here...
-                        //alert("clicked!");
-                        
-                        // grab the references
-                        var response = $("#response");
-                        
-                        var email = $("#email");
-                        var q1 = $("#q1Txt");
-                        var q2 = $("#q2Txt");
-                        
-                        var q1Correct = false;
-                        var q2Correct = false;
-                        
-                        var q1Err = $("#q1Err");
-                        var q2Err = $("#q2Err");
-                        
-                        var score = 0;
-                        
-                        // reset display elements
-                        q1Err.html("");
-                        q2Err.html("");
-                        response.html("");
-                        
-                        // test question 1
-                        if (eval(q1.val()))
-                        {
-                            q1Correct = true;
-                            score += 5;
-                        }
-                        else
-                        {
-                            q1Correct = false;
-                            q1Err.html("this one is false");
-                        }
-                        
-                        // test question 2
-                        if (eval(q2.val()))
-                        {
-                            q2Correct = true;
-                            score += 5;
-                        }
-                        else
-                        {
-                            q2Correct = false;
-                            q2Err.html("this one is false");
-                        }
-                        
-                        if (q1Correct && q2Correct)
-                        {
-                            response.html("<h2>Both are correct!</h2>");
-                        }
-                        else
-                        {
-                            response.html("<h2>Something is not right!</h2>");
-                            response.css("class","err")
-                        }
-                        
-                        $.ajax({
-                            type: "GET",
-                            dataType: "json",
-                            url: "app.php",
-                            data: {"action": "savescore", "email": email.val(), "score": score},
-                            success: function(data){
-                                
-                                $("#ajaxResponse").html("Favorite beverage: " + data["favorite_beverage"] + "<br />");
-                                
-                                //Favorite restaurant: " + data["favorite_restaurant"] + "<br />Gender: " + data["gender"] + "<br />JSON: " + data["json"]);
-                                
-                                /*
-                                alert("data = " + JSON.stringify(obj) + "\n" +
-                                        "------------\n" +
-                                        "attempt = " + obj.attempt + "\n" +
-                                        "email = " + obj.email + "\n" +
-                                        "numAttempts = " + obj.numAttempts
-                                        );
-                                
-                                $("#attempt").html(data.objData.attempt);
-                                $("#last").html(data.objData.last);
-                                $("#numAttempts").html(data.objData.numAttempts);
-                                */
-                            }
-                        });
-
-                        /*
-                            //alert("Received a response!\n\n" + result);
-                            
-                            //$("#ajaxResponse").html("<pre>" + result + "</pre>");
-                            
-                            var obj = result["objData"];
-                            
-                            $("#ajaxResponse").html(result["objData"].json);
-                            
-                            // set the display values
-                            $("#attempt").html(result["attempt"]);
-                            $("#last").html(result["last"]);
-                            $("#numAttempts").html(result["numAttempts"]);
-                        }});
-                        */
-                    });
+                {
+                    // do some work here...
+                    //alert("clicked!");
                     
-                /*
-                // ajax example
-                
-                $("button").click(function(){
-                    $.ajax({url: "demo_test.txt", success: function(result){
-                        $("#div1").html(result);
+                    // grab the references
+                    var response = $("#response");
+                    
+                    var email = $("#email");
+                    var q1 = $("#q1Txt");
+                    var q2 = $("#q2Txt");
+                    
+                    var q1Correct = false;
+                    var q2Correct = false;
+                    
+                    var q1Err = $("#q1Err");
+                    var q2Err = $("#q2Err");
+                    
+                    var score = 0;
+                    
+                    // reset display elements
+                    q1Err.html("");
+                    q2Err.html("");
+                    response.html("");
+                    
+                    // test question 1
+                    if (eval(q1.val()))
+                    {
+                        q1Correct = true;
+                        score += 5;
+                    }
+                    else
+                    {
+                        q1Correct = false;
+                        q1Err.html("this one is false");
+                    }
+                    
+                    // test question 2
+                    if (eval(q2.val()))
+                    {
+                        q2Correct = true;
+                        score += 5;
+                    }
+                    else
+                    {
+                        q2Correct = false;
+                        q2Err.html("this one is false");
+                    }
+                    
+                    if (q1Correct && q2Correct)
+                    {
+                        response.html("<h2>Both are correct!</h2>");
+                    }
+                    else
+                    {
+                        response.html("<h2>Something is not right!</h2>");
+                        response.css("class","err")
+                    }
+                    
+                    // set test values
+                    email.val("test@test.com");
+                    score = 10;
+                    
+                    $.ajax({
+                        type: "POST",
+                        dataType: "json",
+                        url: "app.php",
+                        data: {"action": "test", "email":"test@test.com", "score": 10},
+                        success: function(data){
+                            
+                            //alert(data);
+                            //obj = JSON.parse(data["json"]);
+                            
+                            alert("json = " + data["json"]);
+                            //alert("obj = " + JSON.stringify(obj));
+                            
+                            //$("#ajaxResponse").html("Favorite beverage: " + data["favorite_beverage"] + "<br />");
+                            
+                            //$("#attempt").html(obj.attempt);
+                            //$("#last").html(obj.last);
+                            //$("#numAttempts").html(obj.numAttempts);
+
+                        }
+                    });
+
+                    /*
+                        //alert("Received a response!\n\n" + result);
+                        
+                        //$("#ajaxResponse").html("<pre>" + result + "</pre>");
+                        
+                        var obj = result["objData"];
+                        
+                        $("#ajaxResponse").html(result["objData"].json);
+                        
+                        // set the display values
+                        $("#attempt").html(result["attempt"]);
+                        $("#last").html(result["last"]);
+                        $("#numAttempts").html(result["numAttempts"]);
                     }});
+                    */
                 });
-                
-                */
             });
             
         </script>

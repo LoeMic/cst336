@@ -16,20 +16,11 @@
         $categoryID = $_GET['pCat'];
         
         $items = getProducts($name, $categoryID);
-        
-        // test prints
-        /*
-        echo '<br /><br /><br />';
-        echo 'Query = ' . $query;
-        echo '<br /><br />';
-        print_r($items);
-        */
-        //name, salePrice, thumbnailImage, itemId
     }
     else
     {
         // pull without a name or category
-        
+        $items = getProducts(null, null);
     }
     
     // check to see if an item has been added to the cart
@@ -68,11 +59,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        
         <style>
             @import "css/styles.css";
         </style>
@@ -90,7 +76,7 @@
                         <li><a href='index.php'>Home</a></li>
                         <li><a href='cart.php'>
                             <span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span>
-                            Cart: <?php displayCartCount(); ?> </a></li>
+                            Cart: <span id='cartCount'><?php displayCartCount(); ?></span> </a></li>
                         <li><a href='login.php'>Login</a></li>
                     </ul>
                 </nav>
@@ -103,20 +89,31 @@
                     <div class="form-group">
                         <label for="pName">Product Name: </label>
                         <input type="text" class="form-horizontal" name="pName" id="pName" placeholder="Name">
-                        <br />
+                        &nbsp;&nbsp;
                         <label for="pCat">Product Category: </label>
                         <select class="form-horizontal" name="pCat" id="pCat">
                             <option value=""> -- Select -- </option>
                             <?php getCategories() ?>
                         </select>
+                        &nbsp;&nbsp;
+                        <input type="submit" value="Submit" class="btn btn-default">
                     </div>
-                    <input type="submit" value="Submit" class="btn btn-default">
-                    <br /><br />
                 </form>
+                <br /><br />
                 
                 <!-- Display Search Results -->
+                <div class='productlist'>
                 <?php displayResults(); ?>
+                </div>
+                
             </div>
         </div>
+        
+        <?php displayFooter(); ?>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="js/prodFunctions.js"></script>
     </body>
 <html>
