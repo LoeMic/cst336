@@ -11,11 +11,11 @@ $taxRate = 0.09;
 $shippingDays = 5;
 
 // retrieve the list of categories and build display
-function getCategories()
+function getCategories($categoryId)
 {
     global $conn;
     
-    $sql = "SELECT CategoryId, Name FROM productcategory ORDER BY Name";
+    $sql = "SELECT CategoryID, Name FROM productcategory ORDER BY Name";
     
     $statement = $conn->prepare($sql);
     $statement->execute();
@@ -23,7 +23,14 @@ function getCategories()
     
     foreach ($records as $record)
     {
-        echo "<option value='" .$record['CategoryId']."'>".$record['Name']."</option>";
+        echo "<option value='" .$record['CategoryID']."'";
+        
+        if (isset($categoryId) AND $categoryId > 0 AND $categoryId == $record['CategoryID'])
+        {
+            echo " selected ";
+        }
+        
+        echo ">".$record['Name']."</option>";
     }
 }
 
@@ -66,6 +73,37 @@ function getProducts($name, $categoryID, $salePriceMin, $salePriceMax, $basePric
     $stmt->execute($namedParameters);
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    return $records;
+}
+
+function GetTransactionsByDates($transDateMin, $transDateMax)
+{
+    global $conn;
+    
+    $sql = "SELECT t.*, c.State, c.ZipCode, c.EmailAddress
+            FROM transaction as t
+                JOIN customer as c
+                    on t.CustomerID = c.CustomerID
+            WHERE 1=1 ";
+    $params = array();
+    
+    if (isset($transDateMin) AND $transDateMin != NULL)
+    {
+        $sql .= " AND SaleDate >= :transDateMin ";
+        $params[':transDateMin'] = $transDateMin->format('Y/m/d');
+    }
+    if (isset($transDateMax) AND $transDateMin != NULL)
+    {
+        $sql .= " AND SaleDate <= :transDateMax ";
+        $params[':transDateMax'] = $transDateMax->format('Y/m/d');
+    }
+    
+    $sql .= " ORDER BY SaleDate";
+    
+    $statement = $conn->prepare($sql);
+    $statement->execute($params);
+    $records = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
     return $records;
 }
 
@@ -540,5 +578,82 @@ function displayFooter()
     echo "</footer>";
     echo "<!-- closing footer -->";
 }
+
+function showAdminNav()
+{
+    echo "
+    <a href='admin.php'><button class='btn btn-secondary' id='beginning' name='adminHome'>Admin</button></a>
+    &nbsp;
+    <a href='addProduct.php'><button class='btn btn-secondary' id='beginning' name='addProduct'>Add Product</button></a>
+    &nbsp;
+    <a href='transReport.php'><button class='btn btn-secondary' id='beginning' name='transreport'>Trans Report</button></a>
+    &nbsp;
+    <a href='sum.php'><button class='btn btn-secondary' id='beginning' name='sum'>Get Total Sales</button></a>
+    &nbsp;
+    <a href='count.php'><button class='btn btn-secondary' id='beginning' name='count'>Get Number Of Products</button></a>
+    &nbsp;
+    <a href='avg.php'><button class='btn btn-secondary' id='beginning' name='avg'>Get Average Sale Price</button></a>
+    &nbsp;
+    <a href='logout.php'><button class='btn btn-secondary' id='beginning'/>Logout</button></a>";
+}
+
+function AddProduct($productName, $productDescription, $productImage, $price, $salePrice, $catId)
+{
+    global $conn;
+    $sql = "INSERT INTO product (Name, Description, ImageUrl, BasePrice, SalePrice, CategoryID) 
+            VALUES
+            (:Name, :Description, :ImageUrl, :BasePrice, :SalePrice, :CategoryID)";
+    
+    $np = array();
+    $np['Name'] = $productName;
+    $np['Description'] = $productDescription;
+    $np['ImageUrl'] = $productImage;
+    $np['BasePrice'] = $price;
+    $np['SalePrice'] = $salePrice;
+    $np['CategoryID'] = $catId;
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($np);
+}
+
+// retrieve a single product element
+function getProductInfo($productId)
+{
+    global $conn;
+
+    $sql = "SELECT * FROM product WHERE ProductID = $productId ";
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $record = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    return $record;
+}
+
+// update a single product record
+function UpdateProduct($productId, $name, $desc, $imageUrl, $basePrice, $salePrice, $catId)
+{
+    global $conn;
+    
+    $sql = "UPDATE product 
+                SET Name = :Name, Description = :Description, ImageUrl = :ImageUrl, 
+                    BasePrice = :BasePrice, SalePrice = :SalePrice, CategoryID = :catId 
+            WHERE ProductID = :ProductID";
+    
+    $np = array();
+    $np[':Name'] = $name;
+    $np[':Description'] = $desc;
+    $np[':ImageUrl'] = $imageUrl;
+    $np[':BasePrice'] = $basePrice;
+    $np[':SalePrice'] = $salePrice;
+    $np[':catId'] = $catId;
+    $np[':ProductID'] = $productId;
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($np);
+
+    return true;
+}
+
 
 ?>

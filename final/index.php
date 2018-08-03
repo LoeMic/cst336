@@ -26,7 +26,7 @@
     else
     {
         // pull without a name or category
-        $items = getProducts(null, null);
+        $items = getProducts(null, null, null, null, null, null);
     }
     
     // check to see if an item has been added to the cart

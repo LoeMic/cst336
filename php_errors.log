@@ -197,3 +197,826 @@ Stack trace:
 #2 /home/ubuntu/workspace/cst336/final/checkout.php(24): saveTransaction('MIKE', 'LOESER', 'michael.p.loese...', '6404 Broadway T...', '', 'Oakland', 'CA', '94618', '', Array)
 #3 {main}
   thrown in /home/ubuntu/workspace/cst336/final/functions.php on line 262
+[03-Aug-2018 18:48:04 UTC] PHP Warning:  Missing argument 3 for getProducts(), called in /home/ubuntu/workspace/cst336/final/index.php on line 29 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 31
+[03-Aug-2018 18:48:04 UTC] PHP Stack trace:
+[03-Aug-2018 18:48:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[03-Aug-2018 18:48:04 UTC] PHP   2. getProducts() /home/ubuntu/workspace/cst336/final/index.php:29
+[03-Aug-2018 18:48:04 UTC] PHP Warning:  Missing argument 4 for getProducts(), called in /home/ubuntu/workspace/cst336/final/index.php on line 29 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 31
+[03-Aug-2018 18:48:04 UTC] PHP Stack trace:
+[03-Aug-2018 18:48:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[03-Aug-2018 18:48:04 UTC] PHP   2. getProducts() /home/ubuntu/workspace/cst336/final/index.php:29
+[03-Aug-2018 18:48:04 UTC] PHP Warning:  Missing argument 5 for getProducts(), called in /home/ubuntu/workspace/cst336/final/index.php on line 29 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 31
+[03-Aug-2018 18:48:04 UTC] PHP Stack trace:
+[03-Aug-2018 18:48:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[03-Aug-2018 18:48:04 UTC] PHP   2. getProducts() /home/ubuntu/workspace/cst336/final/index.php:29
+[03-Aug-2018 18:48:04 UTC] PHP Warning:  Missing argument 6 for getProducts(), called in /home/ubuntu/workspace/cst336/final/index.php on line 29 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 31
+[03-Aug-2018 18:48:04 UTC] PHP Stack trace:
+[03-Aug-2018 18:48:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[03-Aug-2018 18:48:04 UTC] PHP   2. getProducts() /home/ubuntu/workspace/cst336/final/index.php:29
+[03-Aug-2018 18:48:05 UTC] PHP Warning:  Missing argument 3 for getProducts(), called in /home/ubuntu/workspace/cst336/final/index.php on line 29 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 31
+[03-Aug-2018 18:48:05 UTC] PHP Stack trace:
+[03-Aug-2018 18:48:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[03-Aug-2018 18:48:05 UTC] PHP   2. getProducts() /home/ubuntu/workspace/cst336/final/index.php:29
+[03-Aug-2018 18:48:05 UTC] PHP Warning:  Missing argument 4 for getProducts(), called in /home/ubuntu/workspace/cst336/final/index.php on line 29 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 31
+[03-Aug-2018 18:48:05 UTC] PHP Stack trace:
+[03-Aug-2018 18:48:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[03-Aug-2018 18:48:05 UTC] PHP   2. getProducts() /home/ubuntu/workspace/cst336/final/index.php:29
+[03-Aug-2018 18:48:05 UTC] PHP Warning:  Missing argument 5 for getProducts(), called in /home/ubuntu/workspace/cst336/final/index.php on line 29 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 31
+[03-Aug-2018 18:48:05 UTC] PHP Stack trace:
+[03-Aug-2018 18:48:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[03-Aug-2018 18:48:05 UTC] PHP   2. getProducts() /home/ubuntu/workspace/cst336/final/index.php:29
+[03-Aug-2018 18:48:05 UTC] PHP Warning:  Missing argument 6 for getProducts(), called in /home/ubuntu/workspace/cst336/final/index.php on line 29 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 31
+[03-Aug-2018 18:48:05 UTC] PHP Stack trace:
+[03-Aug-2018 18:48:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[03-Aug-2018 18:48:05 UTC] PHP   2. getProducts() /home/ubuntu/workspace/cst336/final/index.php:29
+[03-Aug-2018 18:50:18 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/cst336/final/loginProcess.php on line 64
+[03-Aug-2018 19:06:46 UTC] PHP Fatal error:  Cannot redeclare getDatabaseConnection() (previously declared in /home/ubuntu/workspace/cst336/final/dbConnection.php:3) in /home/ubuntu/workspace/cst336/final/dbConnection.php on line 3
+[03-Aug-2018 19:06:46 UTC] PHP Stack trace:
+[03-Aug-2018 19:06:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/admin.php:0
+[03-Aug-2018 19:06:46 UTC] PHP   2. include() /home/ubuntu/workspace/cst336/final/admin.php:6
+[03-Aug-2018 19:14:25 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/ubuntu/workspace/cst336/final/functions.php on line 556
+[03-Aug-2018 19:14:25 UTC] PHP Stack trace:
+[03-Aug-2018 19:14:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/admin.php:0
+[03-Aug-2018 19:17:27 UTC] PHP Fatal error:  Call to undefined function showAdminNav() in /home/ubuntu/workspace/cst336/final/updateProduct.php on line 78
+[03-Aug-2018 19:17:27 UTC] PHP Stack trace:
+[03-Aug-2018 19:17:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/updateProduct.php:0
+[03-Aug-2018 19:52:02 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/final/functions.php on line 610
+[03-Aug-2018 19:52:02 UTC] PHP Stack trace:
+[03-Aug-2018 19:52:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/updateProduct.php:0
+[03-Aug-2018 19:52:02 UTC] PHP   2. UpdateProduct() /home/ubuntu/workspace/cst336/final/updateProduct.php:15
+[03-Aug-2018 19:52:44 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/final/functions.php on line 610
+[03-Aug-2018 19:52:44 UTC] PHP Stack trace:
+[03-Aug-2018 19:52:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/updateProduct.php:0
+[03-Aug-2018 19:52:44 UTC] PHP   2. UpdateProduct() /home/ubuntu/workspace/cst336/final/updateProduct.php:15
+[03-Aug-2018 20:00:59 UTC] PHP Fatal error:  Cannot redeclare getCategories() (previously declared in /home/ubuntu/workspace/cst336/final/functions.php:14) in /home/ubuntu/workspace/cst336/final/functions.php on line 50
+[03-Aug-2018 20:00:59 UTC] PHP Stack trace:
+[03-Aug-2018 20:00:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/updateProduct.php:0
+[03-Aug-2018 20:10:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cst336final.ProductCategory' doesn't exist' in /home/ubuntu/workspace/cst336/final/admin.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final/admin.php(21): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final/admin.php(60): displayAllProducts()
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/final/admin.php on line 21
+[03-Aug-2018 20:15:55 UTC] PHP Warning:  Missing argument 1 for getCategories(), called in /home/ubuntu/workspace/cst336/final/index.php on line 102 and defined in /home/ubuntu/workspace/cst336/final/functions.php on line 14
+[03-Aug-2018 20:15:55 UTC] PHP Stack trace:
+[03-Aug-2018 20:15:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/index.php:0
+[03-Aug-2018 20:15:55 UTC] PHP   2. getCategories() /home/ubuntu/workspace/cst336/final/index.php:102
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:19 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:19 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:19 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:19 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:54 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:54 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:54 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:54 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:35:58 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 65
+[03-Aug-2018 21:35:58 UTC] PHP Stack trace:
+[03-Aug-2018 21:35:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:35:58 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:150
+[03-Aug-2018 21:35:58 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:65
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 63
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:63
+[03-Aug-2018 21:37:40 UTC] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:37:40 UTC] PHP Stack trace:
+[03-Aug-2018 21:37:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:37:40 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:149
+[03-Aug-2018 21:37:40 UTC] PHP   3. date_format() /home/ubuntu/workspace/cst336/final/transReport.php:64
+[03-Aug-2018 21:42:07 UTC] PHP Fatal error:  Call to a member function format() on a non-object in /home/ubuntu/workspace/cst336/final/transReport.php on line 66
+[03-Aug-2018 21:42:07 UTC] PHP Stack trace:
+[03-Aug-2018 21:42:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:42:07 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:152
+[03-Aug-2018 21:44:26 UTC] PHP Fatal error:  Call to a member function setDate() on a non-object in /home/ubuntu/workspace/cst336/final/transReport.php on line 64
+[03-Aug-2018 21:44:26 UTC] PHP Stack trace:
+[03-Aug-2018 21:44:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 21:44:26 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:151
+[03-Aug-2018 21:57:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336/final/functions.php:104
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final/functions.php(104): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final/transReport.php(18): GetTransactionsByDates('8/1/2017', '9/5/2017')
+#2 /home/ubuntu/workspace/cst336/final/transReport.php(158): BuildReportDisplay()
+#3 {main}
+  thrown in /home/ubuntu/workspace/cst336/final/functions.php on line 104
+[03-Aug-2018 21:58:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336/final/functions.php:104
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final/functions.php(104): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final/transReport.php(18): GetTransactionsByDates('8/1/2017', '9/5/2017')
+#2 /home/ubuntu/workspace/cst336/final/transReport.php(158): BuildReportDisplay()
+#3 {main}
+  thrown in /home/ubuntu/workspace/cst336/final/functions.php on line 104
+[03-Aug-2018 21:59:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/cst336/final/functions.php:104
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final/functions.php(104): PDOStatement->execute()
+#1 /home/ubuntu/workspace/cst336/final/transReport.php(18): GetTransactionsByDates('8/1/2017', '9/5/2017')
+#2 /home/ubuntu/workspace/cst336/final/transReport.php(158): BuildReportDisplay()
+#3 {main}
+  thrown in /home/ubuntu/workspace/cst336/final/functions.php on line 104
+[03-Aug-2018 22:00:33 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/cst336/final/transReport.php on line 113
+[03-Aug-2018 22:00:33 UTC] PHP Stack trace:
+[03-Aug-2018 22:00:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 22:00:33 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:158
+[03-Aug-2018 22:09:39 UTC] PHP Catchable fatal error:  Object of class DateTime could not be converted to string in /home/ubuntu/workspace/cst336/final/functions.php on line 104
+[03-Aug-2018 22:09:39 UTC] PHP Stack trace:
+[03-Aug-2018 22:09:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final/transReport.php:0
+[03-Aug-2018 22:09:39 UTC] PHP   2. BuildReportDisplay() /home/ubuntu/workspace/cst336/final/transReport.php:173
+[03-Aug-2018 22:09:39 UTC] PHP   3. GetTransactionsByDates() /home/ubuntu/workspace/cst336/final/transReport.php:26
+[03-Aug-2018 22:09:39 UTC] PHP   4. PDOStatement->execute() /home/ubuntu/workspace/cst336/final/functions.php:104

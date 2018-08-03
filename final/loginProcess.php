@@ -9,7 +9,7 @@ $conn = getDatabaseConnection("cst336final");
 $username = $_POST['username'];
 $password = sha1($_POST['password']);
 
-$sql = "SELECT * FROM user WHERE username = :username AND password = :password"; 
+$sql = "SELECT * FROM user WHERE UserName = :username AND Password = :password"; 
 
 $np = array();
 
@@ -24,16 +24,18 @@ if(empty($record)) {
     $_SESSION['incorrect'] = true;
     header("Location:login.php");
 } else {
-    if(strtolower($record['role']) == 'a' || strtolower($record['admin']) == 'yes')        // don't know which is correct
+    
+    if(strtolower($record['Role']) == 'a')        // don't know which is correct
     {
         //go to admin page
         $_SESSION['incorrect'] = false;
         $_SESSION['adminName'] = $record['FirstName'] . " " . $record['LastName'];
         
+
         // update the last login value
         $sql = "UPDATE user
-                    set LastLogin = now()
-                WHERE UserID=" . $record['UserID']; 
+                    set LastLogin = NOW()
+                WHERE UserName = $username ";
         
         try
         {
