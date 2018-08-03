@@ -10,12 +10,18 @@
         $_SESSION['cart'] = array();
     }
 
-    if (isset($_GET['pName']) OR isset($_GET['pCat']))
+    if (isset($_GET['pName']) OR isset($_GET['pCat']) 
+        OR isset($_GET['basepriceMin']) OR isset($_GET['basepriceMax'])
+        OR isset($_GET['salepriceMin']) OR isset($_GET['salepriceMax']))
     {
         $name = $_GET['pName'];
         $categoryID = $_GET['pCat'];
+        $salePrice = $_GET['saleprice'];
+        $basePrice = $_GET['baseprice'];
         
-        $items = getProducts($name, $categoryID);
+        $items = getProducts($_GET['pName'], $_GET['pCat'], 
+                    $_GET['salepriceMin'], $_GET['salepriceMax'],
+                    $_GET['basepriceMin'], $_GET['basepriceMax']);
     }
     else
     {
@@ -95,7 +101,18 @@
                             <option value=""> -- Select -- </option>
                             <?php getCategories() ?>
                         </select>
+                        <br/>
+                        <label for="salepriceMin">Sale Price: </label>
+                        <input type="text" class="form-horizontal" name="salepriceMin" id="salepriceMin" placeholder="Min">
                         &nbsp;&nbsp;
+                        <input type="text" class="form-horizontal" name="salepriceMax" id="salepriceMax" placeholder="Max">
+                        <br />
+                        <label for="basepriceMin">Base Price: </label>
+                        <input type="text" class="form-horizontal" name="basepriceMin" id="basepriceMin" placeholder="Min">
+                        &nbsp;&nbsp;
+                        <input type="text" class="form-horizontal" name="basepriceMax" id="basepriceMax" placeholder="Max">
+                    </div>
+                    <div class="form-group">
                         <input type="submit" value="Submit" class="btn btn-default">
                     </div>
                 </form>

@@ -28,7 +28,7 @@ function getCategories()
 }
 
 // retrieve the products for the search
-function getProducts($name, $categoryID)
+function getProducts($name, $categoryID, $salePriceMin, $salePriceMax, $basePriceMin, $basePriceMax)
 {
     global $conn;
     
@@ -44,6 +44,20 @@ function getProducts($name, $categoryID)
     {
         $sql .= " AND CategoryId = :categoryId";
         $namedParameters[":categoryId"] = $categoryID;
+    }
+    
+    if (!empty($salePriceMin) AND !empty($salePriceMax))
+    {
+        $sql .= " AND SalePrice >= :salePriceMin AND SalePrice <= :salePriceMax ";
+        $namedParameters[":salePriceMin"] = $salePriceMin;
+        $namedParameters[":salePriceMax"] = $salePriceMax;
+    }
+    
+    if (!empty($basePriceMin) AND !empty($basePriceMax))
+    {
+        $sql .= " AND BasePrice >= :basePriceMin AND BasePrice <= :basePriceMax";
+        $namedParameters[":basePriceMin"] = $basePriceMin;
+        $namedParameters[":basePriceMax"] = $basePriceMax;
     }
     
     $sql .= " ORDER BY Name";
