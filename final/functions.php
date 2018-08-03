@@ -86,11 +86,9 @@ function saveTransaction($fname, $lname, $email, $address1, $address2, $city,
     //$totalSale = number_format($totalSale,2);
     //$totalBase = number_format($totalBase,2);
     
-    $calcTax = $totalSale * $taxRate;
-    $calcTax = number_format($calcTax, 2);
+    $calcTax = number_format($totalSale * $taxRate, 2);
     
-    $calcShipping = $totalSale * $shippingFlatRate;
-    $calcShipping = number_format($calcShipping, 2);
+    $calcShipping = number_format($totalSale * $shippingFlatRate, 2);
     
     // total - sale + tax + shipping
     $calcTotal = ($totalSale + $calcTax + $calcShipping);
@@ -104,7 +102,8 @@ function saveTransaction($fname, $lname, $email, $address1, $address2, $city,
     //echo 'Customer ID = ' . $customerId . '\n';
     
     // save the transaction (req's customer id)
-    $transId = createTransaction($customerId, $cart, $tendertype, $totalSale, $totalBase, $calcTax, $calcShipping, $calcTotal);
+    $transId = createTransaction($customerId, $tendertype, $totalSale, 
+                                    $totalBase, $calcTax, $calcShipping, $calcTotal);
     
     //echo 'Transaction ID = ' . $transId . '\n';
     
@@ -219,14 +218,13 @@ function createTransaction($customerId, $tendertype, $totalSale, $totalBase, $ca
             (CustomerID, SaleDate, DeliveryDate, TotalAmount, ItemTotal, DiscountAmount,
                 TaxTotal, ShippingTotal, TenderType, CreatedDate, UpdatedDate)
             VALUES
-            (:customerId, NOW(), DATE_ADD(NOW(), INTERVAL 10 DAY), :calcTotal,
-                :saleTotal, :discountAmount, :calcTax, :calcShipping, :tenderType, 
-                NOW(), NOW()) ";
+            (:customerId, NOW(), DATE_ADD(NOW(), INTERVAL 10 DAY), :calcTotal, :totalSale, :discountAmount, 
+                :calcTax, :calcShipping, :tenderType, NOW(), NOW()) ";
             
     $namedParams = array();
     $namedParams[":customerId"] = $customerId;
     $namedParams[":calcTotal"] = $calcTotal;
-    $namedParams[":saleTotal"] = $totalSale;
+    $namedParams[":totalSale"] = $totalSale;
     $namedParams[":discountAmount"] = $totalBase - $totalSale;
     $namedParams[":calcTax"] = $calcTax;
     $namedParams[":calcShipping"] = $calcShipping;
@@ -450,8 +448,8 @@ function displayCartTotals()
     $calcTotal = ($totalSale + $calcTax + $calcShipping);
     
     echo "<tr><td colspan=7 class='cartTotals'>&nbsp;</td></tr>";
-    echo "<tr><td colspan=7 class='cartTotals'>Total Base: <span class='cartBasePrice'>$" . $totalBase . "</span></td></tr>";
-    echo "<tr><td colspan=7 class='cartTotals'>Total Sale: <span class='cartTotal'>$" . $totalSale . "</span></td></tr>";
+    echo "<tr><td colspan=7 class='cartTotals'>Total Base: <span class='cartBasePrice'>$" . number_format($totalBase,2) . "</span></td></tr>";
+    echo "<tr><td colspan=7 class='cartTotals'>Total Sale: <span class='cartTotal'>$" . number_format($totalSale,2) . "</span></td></tr>";
     echo "<tr><td colspan=7 class='cartTotals'>Total Tax: <span class='cartTotal'>$" . $calcTax . "</span></td></tr>";
     echo "<tr><td colspan=7 class='cartTotals'>Total Shipping: <span class='cartTotal'>$" . $calcShipping . "</span></td></tr>";
     echo "<tr><td colspan=7 class='cartTotals'>--------------------------</td></tr>";
@@ -497,8 +495,8 @@ function displayCheckoutTotals()
     $calcTotal = ($totalSale + $calcTax + $calcShipping);
     
     echo "<table>";
-    echo "<tr><td class='cartTotals'>Total Sale: <span class='cartTotal'>$" . $totalSale . "</span></td></tr>";
-    echo "<tr><td class='cartTotals'>Total Tax: <span class='cartTotal'>$" . $calcTax . "</span></td></tr>";
+    echo "<tr><td class='cartTotals'>Total Sale: <span class='cartTotal'>$" . number_format($totalSale,2) . "</span></td></tr>";
+    echo "<tr><td class='cartTotals'>Total Tax: <span class='cartTotal'>$" . number_format($calcTax,2) . "</span></td></tr>";
     echo "<tr><td class='cartTotals'>Total Shipping: <span class='cartTotal'>$" . $calcShipping . "</span></td></tr>";
     echo "<tr><td class='cartTotals'>--------------------------</td></tr>";
     echo "<tr><td class='cartTotals cartTotalSale'>Total Charge: <span class='cartTotalSale'>$" . $calcTotal . "</span></td></tr>";
