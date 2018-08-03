@@ -22,13 +22,13 @@ $record = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if(empty($record)) {
     $_SESSION['incorrect'] = true;
-    header("Location:index.php");
+    header("Location:login.php");
 } else {
-    if(strtolower($record['admin']) == 'yes'  || strtolower($record['role']) == 'a')        // don't know which is correct
+    if(strtolower($record['role']) == 'a' || strtolower($record['admin']) == 'yes')        // don't know which is correct
     {
         //go to admin page
         $_SESSION['incorrect'] = false;
-        $_SESSION['adminName'] = $record['firstName'] . " " . $record['lastName'];
+        $_SESSION['adminName'] = $record['FirstName'] . " " . $record['LastName'];
         
         // update the last login value
         $sql = "UPDATE user
@@ -50,14 +50,12 @@ if(empty($record)) {
         {
             echo 'Caught exception: ',  $e->getMessage(), "\n";
         }
-        
 
         header("Location:admin.php");
     }
-    
     else {//go to user page
         $_SESSION['incorrect'] = false;
-        $_SESSION['adminName'] = $record['firstName'] . " " . $record['lastName'];
+        $_SESSION['adminName'] = $record['FirstName'] . " " . $record['LastName'];
         header("Location:user.php");
     }
 }

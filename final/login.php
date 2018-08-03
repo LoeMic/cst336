@@ -31,8 +31,10 @@
             <?php
             
             if($_SESSION['incorrect'])
+            {
                 echo "<p class = 'lead' id = 'error' style= 'color::red'>";
                 echo "<strong>Incorrect username or password. </strong></p>";
+            }
             ?>
             
         </form>
