@@ -117,6 +117,41 @@ td.product {
     color: darkred;
 }
 
+.custdatahead {
+    border: 1px solid lightgray;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle;    
+}
+.custdata {
+    border: 1px solid lightgray;
+    text-align: right;
+    padding: 10px 10px 10px 10px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.checkoutleft {
+    vertical-align: top;
+    float:left;
+    text-align: right;
+    padding-right: 1%;
+    width: 50%;
+}
+.checkoutright {
+    vertical-align: top;
+    float: right;
+    text-align: left;
+    padding-left: 1%;
+    width: 50%;
+}
+.checkoutall {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 a {
     color: grey;
@@ -139,3 +174,17 @@ footer {
     color: grey;
 }
 
+.req {
+    color: red;
+}
+
+.err {
+    color: red;
+    font-weight: bold;
+}
+
+.txncomp {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}

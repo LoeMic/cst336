@@ -28,15 +28,17 @@
         $productDescription = $_GET['Description'];
         $productImage = $_GET['ImageUrl'];
         $price = $_GET['BasePrice'];
+        $salePrice = $_GET['SalePrice'];
         //catId= $_GET['catId'];
         
-        $sql = "INSERT INTO product (Name, Description, ImageUrl, BasePrice) VALUES (:Name, :Description, :ImageUrl, :BasePrice)";
+        $sql = "INSERT INTO product (Name, Description, ImageUrl, BasePrice, SalePrice) VALUES (:Name, :Description, :ImageUrl, :BasePrice, :SalePrice)";
         
         $np = array();
         $np['Name'] = $productName;
         $np['Description'] = $productDescription;
         $np['ImageUrl'] = $productImage;
         $np['BasePrice'] = $price;
+        $np['SalePrice'] = $salePrice;
         //$np['catId'] = $catId;
         
         $stmt = $conn->prepare($sql);
@@ -55,7 +57,8 @@
         <form>
             <strong>Product Name</strong> <input type= "text" class = "form-control" name = "Name"><br> 
             <strong>Desctription</strong> <textarea name = "Description" class = "form-control" cols = 50 rows = 4></textarea><br>
-            <strong>Price</strong> <input type="text" class = "form-control" name = "BasePrice"><br>
+            <strong>Base Price</strong> <input type="text" class = "form-control" name = "BasePrice"><br>
+            <strong>Sale Price</strong> <input type="text" class = "form-control" name = "SalePrice"><br>
             <!--<strong>Category</strong> <select name="catId" class="form-control">
                 <option value = "">Select One</option> -->
                     <?//php getCategories() ?>

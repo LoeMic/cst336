@@ -5,6 +5,11 @@ include 'dbConnection.php';
 
 $conn = getDatabaseConnection("cst336final");
 
+// global calc values
+$shippingFlatRate = 0.05;
+$taxRate = 0.09;
+$shippingDays = 5;
+
 // retrieve the list of categories and build display
 function getCategories()
 {
@@ -50,6 +55,220 @@ function getProducts($name, $categoryID)
     return $records;
 }
 
+// process the save after customer checkout
+function saveTransaction($fname, $lname, $email, $address1, $address2, $city, 
+                            $state, $postalcode, $tendertype, $cart)
+{
+    // test
+    //echo "saving transaction...";
+    
+    $valid = true;
+    
+    // calculate totals
+    global $taxRate;
+    global $shippingFlatRate;
+    
+    $totalBase = 0;
+    $totalSale = 0;
+    $calcTax = 0;
+    $calcShipping = 0;
+    $calcTotal = 0;
+    
+    // loop through the cart and create the totals
+    foreach ($cart as $item)
+    {
+        // grab the data from the array
+        //$id = $item['id'];
+        $totalBase += ($item['basePrice'] * $item['quantity']);
+        $totalSale += ($item['salePrice'] * $item['quantity']);
+    }
+    
+    //$totalSale = number_format($totalSale,2);
+    //$totalBase = number_format($totalBase,2);
+    
+    $calcTax = $totalSale * $taxRate;
+    $calcTax = number_format($calcTax, 2);
+    
+    $calcShipping = $totalSale * $shippingFlatRate;
+    $calcShipping = number_format($calcShipping, 2);
+    
+    // total - sale + tax + shipping
+    $calcTotal = ($totalSale + $calcTax + $calcShipping);
+
+    // testing
+    //echo 'Starting customer data .. \n';
+
+    // save the customer info    
+    $customerId = saveCustomer($fname, $lname, $email, $address1, $address2, $city, $state, $postalcode);
+    
+    //echo 'Customer ID = ' . $customerId . '\n';
+    
+    // save the transaction (req's customer id)
+    $transId = createTransaction($customerId, $cart, $tendertype, $totalSale, $totalBase, $calcTax, $calcShipping, $calcTotal);
+    
+    //echo 'Transaction ID = ' . $transId . '\n';
+    
+    // save the lineitems (req's txn id)
+    createLineItems($customerId, $transId, $cart);
+    
+    //echo 'LineItems created...\n';
+    
+    return $valid;
+}
+
+function saveCustomer($fname, $lname, $email, $address1, $address2, $city, $state, $postalcode)
+{
+    $valid = true;
+    $customerId = 0;
+    
+    //echo 'email = ' . $email . '\n';
+    
+    // check for existing customer - match on email address
+    global $conn;
+    
+    $sql = "SELECT CustomerID FROM customer WHERE EmailAddress = :emailaddress";
+    
+    $namedParameters[":emailaddress"] = $email;
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($namedParameters);
+    $record = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $customerId = $record['CustomerID'];
+    
+    //echo 'customer id = ' . $customerId . '\n';
+    
+    // test for update
+    if ($customerId > 0)
+    {
+        // this is an insert
+        $sql = "UPDATE customer
+                    SET FirstName = :fname,
+                        LastName = :lname,
+                        Address1 = :address1,
+                        Address2 = :address2,
+                        City = :city,
+                        State = :state,
+                        ZipCode = :postalcode,
+                        LastPurchaseDate = NOW(),
+                        UpdatedDate = NOW()
+                WHERE EmailAddress = :email";
+
+        $namedParams = array();
+        $namedParams[":fname"] = $fname;
+        $namedParams[":lname"] = $lname;
+        $namedParams[":address1"] = $address1;
+        $namedParams[":address2"] = $address2;
+        $namedParams[":city"] = $city;
+        $namedParams[":state"] = $state;
+        $namedParams[":postalcode"] = $postalcode;
+        $namedParams[":email"] = $email;
+        
+        // should have a transaction
+        $statement = $conn->prepare($sql);
+        $statement->execute($namedParams);
+        
+        //echo "Customer has been updated!";
+    }
+    else
+    {
+        $sql = "INSERT INTO customer
+            (EmailAddress, FirstName, LastName, Address1, Address2, City, State, ZipCode, LastPurchaseDate, CreatedDate, UpdatedDate)
+            VALUES
+            (:email, :fname, :lname, :address1, :address2, :city, :state, :postalcode, NOW(), NOW(), NOW()) ";
+            
+        $namedParams = array();
+        $namedParams[":email"] = $email;
+        $namedParams[":fname"] = $fname;
+        $namedParams[":lname"] = $lname;
+        $namedParams[":address1"] = $address1;
+        $namedParams[":address2"] = $address2;
+        $namedParams[":city"] = $city;
+        $namedParams[":state"] = $state;
+        $namedParams[":postalcode"] = $postalcode;
+
+        // should have a transaction
+        $statement = $conn->prepare($sql);
+        $statement->execute($namedParams);
+        //$customerId = $statement->lastInsertId();
+        $customerId = $conn->lastInsertId();
+    }
+    
+    if ($valid)
+    {
+        return $customerId;
+    }
+    else
+    {
+        return -1;
+    }
+}
+
+function createTransaction($customerId, $tendertype, $totalSale, $totalBase, $calcTax, 
+                                $calcShipping, $calcTotal)
+{
+    global $shippingDays;
+    
+    $valid = true;
+    $transId = 0;
+    
+    global $conn;
+    
+    // All transactions are inserts - we do not allow for returns or updates
+    $sql = "INSERT INTO transaction
+            (CustomerID, SaleDate, DeliveryDate, TotalAmount, ItemTotal, DiscountAmount,
+                TaxTotal, ShippingTotal, TenderType, CreatedDate, UpdatedDate)
+            VALUES
+            (:customerId, NOW(), DATE_ADD(NOW(), INTERVAL 10 DAY), :calcTotal,
+                :saleTotal, :discountAmount, :calcTax, :calcShipping, :tenderType, 
+                NOW(), NOW()) ";
+            
+    $namedParams = array();
+    $namedParams[":customerId"] = $customerId;
+    $namedParams[":calcTotal"] = $calcTotal;
+    $namedParams[":saleTotal"] = $totalSale;
+    $namedParams[":discountAmount"] = $totalBase - $totalSale;
+    $namedParams[":calcTax"] = $calcTax;
+    $namedParams[":calcShipping"] = $calcShipping;
+    $namedParams[":tenderType"] = $tendertype;
+
+    // should have a transaction
+    $statement = $conn->prepare($sql);
+    $statement->execute($namedParams);
+    $transId = $conn->lastInsertId();
+
+    return $transId;
+}
+
+function createLineItems($customerId, $transId, $cart)
+{
+    $valid = true;
+    
+    global $conn;
+    
+    // All transactions are inserts - we do not allow for returns or updates
+    $sql = "INSERT INTO lineitem
+            (TransactionID, ProductID, ItemPrice, Quantity, CreatedDate, UpdatedDate)
+            VALUES
+            (:transId, :productId, :itemPrice, :quantity, NOW(), NOW()) ";
+
+    foreach ($cart as $item)
+    {
+        $namedParams = array();
+        $namedParams[":transId"] = $transId;
+        $namedParams[":productId"] = $item['id'];
+        $namedParams[":itemPrice"] = $item['salePrice'];
+        $namedParams[":quantity"] = $item['quantity'];
+
+        // should have a transaction
+        $statement = $conn->prepare($sql);
+        $statement->execute($namedParams);
+        $lineitemId = $conn->lastInsertId();
+    }
+    
+    return $valid;
+}
+
 function displayResults()
 {
     global $items;      // work with the global results array
@@ -73,6 +292,10 @@ function displayResults()
         $salePrice = $item['SalePrice'];
         $imageUrl = $item['ImageUrl'];
         $desc = $item['Description'];
+        
+        // escape the quotes in name and desc
+        $name = addslashes($name);
+        $desc = addslashes($desc);
         
         // check for new row
         if ($rowCount % $itemsPerRow == 0)
@@ -186,7 +409,9 @@ function displayCart()
         // build the totals display
         displayCartTotals();
         
-        displayCheckout();
+        // show the checkout button
+        echo "<tr><td colspan=7 class='cartTotals'><br/>--------------------------</td></tr>";
+        echo "<tr><td colspan=7 class='cartTotals'><a href='checkout.php' alt='Checkout'><button class='btn btn-danger'>Checkout</button></td></tr>";
         
         echo "</table>";
     }
@@ -194,11 +419,12 @@ function displayCart()
 
 function displayCartTotals()
 {
+    global $taxRate;
+    global $shippingFlatRate;
+    
     $totalBase = 0;
     $totalSale = 0;
-    $taxRate = 0.09;
     $calcTax = 0;
-    $shippingFlatRate = 0.05;
     $calcShipping = 0;
     $calcTotal = 0;
     
@@ -232,10 +458,51 @@ function displayCartTotals()
     echo "<tr><td colspan=7 class='cartTotals cartTotalSale'>Total Charge: <span class='cartTotalSale'>$" . $calcTotal . "</span></td></tr>";
 }
 
-function displayCheckout()
+function displayCheckoutTotals()
 {
-    echo "<tr><td colspan=7 class='cartTotals'><br/>--------------------------</td></tr>";
-    echo "<tr><td colspan=7 class='cartTotals'><a href='checkout.php' alt='Checkout'><button class='btn btn-danger'>Checkout</button></td></tr>";
+    global $taxRate;
+    global $shippingFlatRate;
+    
+    // show the purchase total
+    $totalBase = 0;
+    $totalSale = 0;
+    $calcTax = 0;
+    $calcShipping = 0;
+    $calcTotal = 0;
+    
+    if (!isset($_SESSION['cart']))
+    {
+        $_SESSION['cart'] = array();
+    }
+    
+    // loop through the cart and create the totals
+    foreach ($_SESSION['cart'] as $item)
+    {
+        // grab the data from the array
+        //$id = $item['id'];
+        $totalBase += ($item['basePrice'] * $item['quantity']);
+        $totalSale += ($item['salePrice'] * $item['quantity']);
+    }
+    
+    //$totalSale = number_format($totalSale,2);
+    //$totalBase = number_format($totalBase,2);
+    
+    $calcTax = $totalSale * $taxRate;
+    $calcTax = number_format($calcTax, 2);
+    
+    $calcShipping = $totalSale * $shippingFlatRate;
+    $calcShipping = number_format($calcShipping, 2);
+    
+    // total - sale + tax + shipping
+    $calcTotal = ($totalSale + $calcTax + $calcShipping);
+    
+    echo "<table>";
+    echo "<tr><td class='cartTotals'>Total Sale: <span class='cartTotal'>$" . $totalSale . "</span></td></tr>";
+    echo "<tr><td class='cartTotals'>Total Tax: <span class='cartTotal'>$" . $calcTax . "</span></td></tr>";
+    echo "<tr><td class='cartTotals'>Total Shipping: <span class='cartTotal'>$" . $calcShipping . "</span></td></tr>";
+    echo "<tr><td class='cartTotals'>--------------------------</td></tr>";
+    echo "<tr><td class='cartTotals cartTotalSale'>Total Charge: <span class='cartTotalSale'>$" . $calcTotal . "</span></td></tr>";
+    echo "</table>";
 }
 
 // return the count item items in the cart

@@ -55,7 +55,7 @@
                     </ul>
                 </nav>
                 <br /><br />
-                <div class="page-header"><h1> E-Shop Site </h1></div>
+                <div class="page-header"><h1> E-Shop Site </h1><h4>Cart</h4></div>
                 
                 <br /><br />
                 

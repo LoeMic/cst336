@@ -43,13 +43,14 @@ function getCategories($catId) {
 */
     if(isset($_GET['updateProduct'])) {
         
-        $sql = "UPDATE product SET Name = :Name, Description = :Description, ImageUrl = :ImageUrl, BasePrice = :BasePrice WHERE ProductID = :ProductID";
+        $sql = "UPDATE product SET Name = :Name, Description = :Description, ImageUrl = :ImageUrl, BasePrice = :BasePrice, SalePrice = :SalePrice WHERE ProductID = :ProductID";
         
         $np = array();
         $np[':Name'] = $_GET['Name'];
         $np[':Description'] = $_GET['Description'];
         $np[':ImageUrl'] = $_GET['ImageUrl'];
         $np[':BasePrice'] = $_GET['BasePrice'];
+        $np[':SalePrice'] = $_GET['SalePrice'];
         //$np[':catId'] = $_GET['catId'];
         $np[':ProductID'] = $_GET['ProductID'];
         
@@ -72,6 +73,7 @@ function getCategories($catId) {
             <strong>Product Name</strong> <input type= "text" class = "form-control" name = "Name" value = "<?=$product['Name']?>"><br> 
             <strong>Desctription</strong> <textarea name = "Description" class = "form-control" cols = 50 rows = 4> <?=$product['Description']?> </textarea><br>
             <strong>Price</strong> <input type="text" class = "form-control" name = "BasePrice" value = "<?=$product['BasePrice']?>"><br>
+            <strong>Sale Price</strong> <input type="text" class = "form-control" name = "SalePrice" value = "<?=$product['SalePrice']?>"><br>
             
             <!--<strong>Category</strong> <select name="catId" class="form-control">
                 <option value = "">Select One</option> 
