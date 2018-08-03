@@ -42,9 +42,9 @@ function BuildReportDisplay()
             <th scope='col'>Delivery Date</th>
             <th scope='col'>Sale Total</th>
             <th scope='col'>Item Total</th>
-            <th scope='col'>Discount Total</th>
             <th scope='col'>Tax</th>
             <th scope='col'>Shipping</th>
+            <th scope='col'>Discount Total</th>
             <th scope='col'>Tender Type</th>
         </tr>
         </thead>";
@@ -68,6 +68,19 @@ function BuildReportDisplay()
         ShippingTotal
         TaxTotal
         TenderType
+        
+        <th scope='col'>Transaction ID</th>
+            <th scope='col'>Customer Email</th>
+            <th scope='col'>Ship State</th>
+            <th scope='col'>Ship PostalCode</th>
+            <th scope='col'>Sale Date</th>
+            <th scope='col'>Delivery Date</th>
+            <th scope='col'>Sale Total</th>
+            <th scope='col'>Item Total</th>
+            <th scope='col'>Discount Total</th>
+            <th scope='col'>Tax</th>
+            <th scope='col'>Shipping</th>
+            <th scope='col'>Tender Type</th>
     */
     foreach ($records as $record)
     {
@@ -79,10 +92,10 @@ function BuildReportDisplay()
         echo "<td>" . $record['SaleDate'] . "</td>";
         echo "<td>" . $record['DeliveryDate'] . "</td>";
         echo "<td>" . $record['TotalAmount'] . "</td>";
-        echo "<td>" . ($record['TotalAmount']-$record['DiscountAmount']) . "</td>";
-        echo "<td>" . $record['DiscountAmount'] . "</td>";
+        echo "<td>" . $record['ItemTotal'] . "</td>";
         echo "<td>" . $record['TaxTotal'] . "</td>";
         echo "<td>" . $record['ShippingTotal'] . "</td>";
+        echo "<td>" . $record['DiscountAmount'] . "</td>";
         echo "<td>" . $record['TenderType'] . "</td>";
         echo "</tr>";
         
