@@ -107,6 +107,45 @@ function GetTransactionsByDates($transDateMin, $transDateMax)
     return $records;
 }
 
+// populate the product report
+function GetProductSalesByDates($lastDays)
+{
+    global $conn;
+
+    /*
+        DATE_ADD(date, INTERVAL value unit)
+    */
+    
+    $sql = "SELECT l.ProductId, sum(l.Quantity) as SaleQuantity, p.Name, p.ImageUrl
+            FROM lineitem as l
+            	join product as p
+                	on l.ProductID = p.ProductID
+            WHERE TransactionID in (
+            	SELECT t.TransactionID
+                FROM transaction as t 
+                WHERE 1=1 ";
+    
+    $params = array();
+    
+    // add the date tests if values provided
+    if (isset($lastDays) AND $lastDays != NULL)
+    {
+        $sql .= " AND t.SaleDate BETWEEN DATE_ADD(NOW(), INTERVAL :lastDays DAY) AND NOW()  ";
+        $params[':lastDays'] = $lastDays;
+    }
+
+    // finish the sql
+    $sql .= ")
+            GROUP BY l.ProductID
+            ORDER BY p.Name ";
+
+    $statement = $conn->prepare($sql);
+    $statement->execute($params);
+    $records = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+    return $records;
+}
+
 // process the save after customer checkout
 function saveTransaction($fname, $lname, $email, $address1, $address2, $city, 
                             $state, $postalcode, $tendertype, $cart)
@@ -587,6 +626,8 @@ function showAdminNav()
     <a href='addProduct.php'><button class='btn btn-secondary' id='beginning' name='addProduct'>Add Product</button></a>
     &nbsp;
     <a href='transReport.php'><button class='btn btn-secondary' id='beginning' name='transreport'>Trans Report</button></a>
+    &nbsp;
+    <a href='productReport.php'><button class='btn btn-secondary' id='beginning' name='productreport'>Product Sale Report</button></a>
     &nbsp;
     <a href='sum.php'><button class='btn btn-secondary' id='beginning' name='sum'>Get Total Sales</button></a>
     &nbsp;
