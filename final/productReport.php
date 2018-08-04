@@ -19,7 +19,7 @@ function BuildReportDisplay()
     // use for avg
     $totalRecords = count($records);
     
-    echo "<h4>Product Sales in Last " . abs($lastDays) . " Days</h4>";
+    echo "<h4>Product Sales in Last " . (empty($lastDays) ? " [unlimited] " : abs($lastDays)) . " Days</h4>";
     echo "<br /><br />";
     echo "<table class= 'table table-hover'>";
     echo "<thead>
