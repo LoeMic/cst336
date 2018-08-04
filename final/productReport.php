@@ -19,7 +19,7 @@ function BuildReportDisplay()
     // use for avg
     $totalRecords = count($records);
     
-    echo "<div>Product Sales in Last " . abs($lastDays) . " Days</div>";
+    echo "<h4>Product Sales in Last " . abs($lastDays) . " Days</h4>";
     echo "<br /><br />";
     echo "<table class= 'table table-hover'>";
     echo "<thead>
@@ -46,7 +46,7 @@ function BuildReportDisplay()
         echo "<td>" . $record['Name'] . "</td>";
         echo "<td>" . $record['SaleQuantity'] . "</td>";
         echo "<td>";
-        echo empty($record['ImageUrl']) || $record['ImageUrl'] == NULL ? "&nbsp;" : "<img class='productImage' src='" . $record['ImageUrl'] . "' width=100>";
+        echo empty($record['ImageUrl']) || $record['ImageUrl'] == NULL ? "&nbsp;" : "<img class='productImage' src='" . $record['ImageUrl'] . "' width=50>";
         echo "</td>";
         echo "</tr>";
         

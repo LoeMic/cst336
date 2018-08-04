@@ -116,7 +116,7 @@ function GetProductSalesByDates($lastDays)
         DATE_ADD(date, INTERVAL value unit)
     */
     
-    $sql = "SELECT l.ProductId, sum(l.Quantity) as SaleQuantity, p.Name, p.ImageUrl
+    $sql = "SELECT l.ProductID as ProductID, sum(l.Quantity) as SaleQuantity, p.Name as Name, p.ImageUrl as ImageUrl
             FROM lineitem as l
             	join product as p
                 	on l.ProductID = p.ProductID
