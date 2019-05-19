@@ -11,7 +11,7 @@ echo 'Mike Loeser CST 336 - Internet Programming';
 <br><br>
 <h1>Final Project</h1>
 <br>
-<a href="final/index.php"> Final Project </a>
+<a href="cst336_final_ml/index.php"> Final Project </a>
 
 <br><br>
 <h1>Labs</h1>
